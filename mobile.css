@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--body-background);
+}
+
+header{
+    background: var(--header-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+h1{
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding: 15px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+button{
+    background: var(--header-background);
+    color: var(--white);
+    border: 0;
+    font-family: var(--font);
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: var(--boder-radius);
+}
+
+button:hover{
+    background: var(--hover-button);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.container-meme{
+    width: 90%;
+}
+
+p{
+    font-family: var(--font);
+    background: var(--white);
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+    padding: 5px;
+}
+
+.container-meme div{
+    height: 25vh;
+    background: var(--black);
+}
+
+main button{
+    background: var(--background-button-download);
+    padding: 15px;
+    margin-top: 35px;
+}
