@@ -1,3 +1,11 @@
+h1 {
+    font-size: 2.6rem;
+}
+
 .container-meme div {
-    height: 56vh;
+    height: 50vh;
+}
+
+p{
+    font-size: 2rem;
 }
