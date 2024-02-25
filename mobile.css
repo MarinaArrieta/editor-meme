@@ -76,3 +76,7 @@ main button{
     padding: 15px;
     margin-top: 35px;
 }
+
+main button:hover{
+    background-color: var(--background-button-download-hover);
+}
