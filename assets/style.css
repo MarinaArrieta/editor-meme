@@ -1,0 +1,23 @@
+@import url(mobile.css);
+@import url(tablet.css) screen and (min-width: 768px);
+@import url(laptop.css) screen and (min-width: 1024px);
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+
+:root{
+    /* Modo Oscuro */
+    --gray: #2a2a4d;
+    --blue: #181b2c;
+    --pink: #F2A0ED;
+    --purple: #88ddff;
+    /* --purple: #AE6BF2; */
+    --boder-radius: 3px;
+    --background-button-download-hover: #1b5e20;
+
+    /* Modo Claro */
+
+    /* --font: "Lato", sans-serif;*/
+    /* --font: "Rammetto One", sans-serif ; */
+    --primary-font: "Madimi One", sans-serif;
+    --secundary-font: "Average Sans", sans-serif;
+}

@@ -5,11 +5,11 @@
 }
 
 body{
-    background: var(--body-background);
+    background: var(--gray);
 }
 
 header{
-    background: var(--header-background);
+    background: var(--blue);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,10 +18,10 @@ header{
 }
 
 h1{
-    color: var(--white);
-    font-family: var(--font);
+    color: var(--pink);
+    font-family: var(--primary-font);
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     padding: 15px;
 }
 
@@ -32,10 +32,10 @@ ul{
 }
 
 button{
-    background: var(--header-background);
-    color: var(--white);
+    background: var(--blue);
+    color: var(--purple);
     border: 0;
-    font-family: var(--font);
+    font-family: var(--secundary-font);
     font-size: 1rem;
     padding: 10px;
     border-radius: var(--boder-radius);
@@ -55,24 +55,25 @@ main{
 
 .container-meme{
     width: 90%;
+    background: #AE6BF2;
 }
 
 p{
-    font-family: var(--font);
+    font-family: var(--secundary-font);
     background: var(--white);
     font-weight: bold;
     text-align: center;
-    color: var(--black);
+    color: var(--blue);
     padding: 5px;
 }
 
 .container-meme div{
     height: 25vh;
-    background: var(--black);
+    background: var(--blue);
 }
 
 main button{
-    background: var(--background-button-download);
+    background: var(--blue);
     padding: 15px;
     margin-top: 35px;
 }
