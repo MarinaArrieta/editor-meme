@@ -42,7 +42,10 @@ button{
 }
 
 button:hover{
-    background: var(--hover-button);
+    /* background: var(--gray-light); */
+    background: var(--pink);
+    color: var(--blue);
+    font-weight: bold;
 }
 
 main{
@@ -76,8 +79,11 @@ main button{
     background: var(--blue);
     padding: 15px;
     margin-top: 35px;
+    font-size: 1rem;
 }
 
 main button:hover{
-    background-color: var(--background-button-download-hover);
+    background-color: var(--pink);
+    font-weight: bold;
+    color: var(--blue);
 }
