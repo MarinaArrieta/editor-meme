@@ -5,20 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
 
 :root{
+    --dark-purple: #AE6BF2;
+    --pink: #fd50f3;
+    --yellow: #FFEB3B;
+    
     /* Modo Oscuro */
     --gray: #2a2a4d;
     --gray-light: #383852;
     --blue: #181b2c;
-    --pink: #F2A0ED;
-    --purple: #88ddff;
-    /* --purple: #AE6BF2; */
-    --boder-radius: 3px;
-    --background-button-download-hover: #1b5e20;
 
     /* Modo Claro */
+    --purple: #D8B4F8;
+    --light-yellow: #fff6a9;
+    --green: #88ddff;
+    --boder-radius: 3px;
+    --light-blue: #39a4b1;
+    --light-gradient: linear-gradient(rgb(173, 136, 198) 1px, transparent 1px), linear-gradient(to right, rgb(173, 136, 198) 1px, #ebd7b9 1px);
 
-    /* --font: "Lato", sans-serif;*/
-    /* --font: "Rammetto One", sans-serif ; */
+
     --primary-font: "Madimi One", sans-serif;
     --secundary-font: "Average Sans", sans-serif;
 }

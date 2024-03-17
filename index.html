@@ -4,45 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor de Memes</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/cd30d5437a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header id="back-header">
         <h1>Generador de Memes</h1>
         <nav>
             <ul>
                 <li>
-                    <button>
-                        <i class="fa-regular fa-file-image"></i>
-                        Imagen
+                    <button  id="boton-img">
+                        <i class="fa-solid fa-file-image"></i>
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button id="boton-text">
                         <i class="fa-solid fa-a"></i>
-                        Texto
                     </button>
                 </li>
                 <li>
-                    <button>
-                        <i class="fa-regular fa-lightbulb"></i>
-                        Modo Oscuro
+                    <button id="boton">
+                        <i class="fa-solid fa-sun" id="icon"></i>
                     </button>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="back-main">
         <div class="container-meme">
-            <p>TOP TEXT</p>
-            <div></div>
-            <p>BOTTOM TEXT</p>
+            <p id="top-text">TOP TEXT</p>
+            <div id="container-img" class="container-img">
+                <figure>
+                    <img src="" alt="meme" id="image">
+                </figure>
+            </div>
+            <p id="bottom-text">BOTTOM TEXT</p>
+            <div class="button">
+                <button>
+                    <i class="fa-solid fa-download"></i>
+                </button>
+            </div>
         </div>
-        <button>
-            <i class="fa-solid fa-download"></i>
-            Descargar meme
-        </button>
+        <aside>
+            <section  id="section-imagen" class="img oculto">
+                <div>
+                    <i class="fa-regular fa-circle-xmark" id="close-x"></i>
+                </div>
+                <h2>IMAGEN</h2>
+                <form action="">
+                    <ul>
+                        <li>
+                            <h3>URL</h3>
+                            <input type="url" id="input-image-url">
+                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                        </li>
+                        <li>
+                            <h3>FONDO</h3>
+                            <div class="container-p-hexa">
+                                <input type="color" id="color">
+                                <p id="hexa-color">#000000</p>
+                            </div>
+                                <select id="listcolor" size="1">
+                                    <option value="Ninguno">Ninguno</option>
+                                    <option value="Diferencia">Diferencia</option>
+                                    <option value="Aclarar">Aclarar</option>
+                                    <option value="Oscurecer">Oscurecer</option>
+                                    <option value="Luminucidad">Luminucidad</option>
+                                    <option value="Multiplicar">Multiplicar</option>
+                                </select>
+                        </li>
+                        <li>
+                            <h3>FILTROS</h3>
+                            <label for="">BRILLO</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-brightness">
+                        </li>
+                        <li>
+                            <label for="">OPACIDAD</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-opacity">
+                        </li>
+                        <li>
+                            <label for="">CONTRASTE</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-contrast">
+                        </li>
+                        <li>
+                            <label for="">DESENFOQUE</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-blur">
+                        </li>
+                        <li>
+                            <label for="">ESCALA DE GRISES</label>
+                            <input type="range" min="0" max="100" value="0" id="grayscale">
+                        </li>
+                        <li>
+                            <label>SEPIA</label>
+                            <input id="filter-sepia" type="range" min="0" max="100" value="0">
+                        </li>
+                        <li>
+                            <label for="">HUE</label>
+                            <input type="range" min="0" max="360" value="0" id="filter-hue">
+                        </li>
+                        <li>
+                            <label for="">SATURADO</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-saturate">
+                        </li>
+                        <li>
+                            <label for="">NEGATIVO</label>
+                            <input type="range"  min="0" max="100" value="0" id="filter-negative">
+                        </li>
+                        <li></li>
+                    </ul>
+                </form>
+            </section>
+            <!-- <section id="texto">
+                <h2>TEXTO</h2>
+            </section> -->
+        </aside>
     </main>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

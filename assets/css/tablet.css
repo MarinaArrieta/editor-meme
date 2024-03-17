@@ -2,8 +2,12 @@ h1 {
     font-size: 2.6rem;
 }
 
-.container-meme div {
+/* .container-meme div {
     height: 50vh;
+} */
+
+.img {
+    width: 40%;
 }
 
 p{
