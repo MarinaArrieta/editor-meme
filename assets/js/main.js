@@ -81,52 +81,62 @@ inputImageUrl.addEventListener('input', ()=> {
 //   }
 // });
 
+// Background color
 color.addEventListener('input', ()=> {
   containerImg.style.background = color.value;
   hexaColor.textContent = color.value;
 });
 
+// Event filters
 filterBrightness.addEventListener('input', ()=> {
-  value = filterBrightness.value;
-  image.style.filter = `brightness(${value}%)`;
+  aplyFilter();
 });
 
 filterOpacity.addEventListener('input', ()=> {
-  value = filterOpacity.value;
-  image.style.filter = `opacity(${value}%)`;
+  aplyFilter();
 });
 
 filterContrast.addEventListener('input', ()=> {
-  value = filterContrast.value;
-  image.style.filter = `contrast(${value}%)`;
+  aplyFilter();
 });
 
 filterBlur.addEventListener('input', ()=> {
-  value = filterBlur.value;
-  image.style.filter = `blur(${value}%)`;
+  aplyFilter();
 });
 
 grayscale.addEventListener('input', ()=> {
-  value = grayscale.value;
-  image.style.filter = `grayscale(${value}%)`;
+  aplyFilter();
 });
 
 filterSepia.addEventListener('input', ()=> {
-  value = filterSepia.value;
-  image.style.filter = `sepia(${value}%)`;
+  aplyFilter();
 });
 
 filterHue.addEventListener('input', ()=> {
-  value = filterHue.value;
-  image.style.filter = `hue-rotate(${value}deg)`;
+  aplyFilter();
 });
 
 filterSaturate.addEventListener('input', ()=> {
-  value = filterSaturate.value;
-  image.style.filter = `saturate(${value}%)`;
+  aplyFilter();
 });
 
 filterNegative.addEventListener('input', ()=> {
-  value = filterNegative.value;
-  image.style.filter = `invert(${value}%)`;
+  aplyFilter();
 });
+
+function aplyFilter() {
+  console.log("aaca")
+  filterAll = ` brightness(${filterBrightness.value}%)`;
+  filterAll += ` opacity(${filterOpacity.value}%)`;
+  filterAll += ` contrast(${filterContrast.value}%)`;
+  filterAll += ` blur(${filterBlur.value}px)`;
+  filterAll += ` grayscale(${grayscale.value}%)`;
+  filterAll += ` sepia(${filterSepia.value}%)`;
+  filterAll += ` hue-rotate(${filterHue.value}deg)`;
+  filterAll += ` invert(${filterNegative.value}%)`;
+  filterAll += ` saturate(${filterSaturate.value}%)`;
+  console.log(filterAll)
+  image.style.filter = filterAll;
+};
+
+aplyFilter()
