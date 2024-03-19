@@ -34,9 +34,9 @@
         <div class="container-meme">
             <p id="top-text">TOP TEXT</p>
             <div id="container-img" class="container-img">
-                <figure>
-                    <img src="haku.jpg" alt="meme" id="image">
-                </figure>
+                <!-- <figure>
+                    <img  id="image">
+                </figure> -->
             </div>
             <p id="bottom-text">BOTTOM TEXT</p>
             <div class="button">
@@ -47,7 +47,7 @@
         </div>
         <aside>
             <section  id="section-imagen" class="img oculto">
-                <div>
+                <div class="close-x">
                     <i class="fa-regular fa-circle-xmark" id="close-x"></i>
                 </div>
                 <h2>IMAGEN</h2>
@@ -61,22 +61,22 @@
                         <li>
                             <h3>FONDO</h3>
                             <div class="container-p-hexa">
-                                <input type="color" id="color">
-                                <p id="hexa-color">#000000</p>
+                                <input type="color" id="color" value="#ffffff">
+                                <p id="hexa-color">#ffffff</p>
                             </div>
-                                <select id="listcolor" size="1">
-                                    <option value="Ninguno">Ninguno</option>
-                                    <option value="Diferencia">Diferencia</option>
-                                    <option value="Aclarar">Aclarar</option>
-                                    <option value="Oscurecer">Oscurecer</option>
-                                    <option value="Luminucidad">Luminucidad</option>
-                                    <option value="Multiplicar">Multiplicar</option>
-                                </select>
+                            <select id="blendModeFilter">
+                                <option value="ninguno">Ninguno</option>
+                                <option value="aclarar">Aclarar</option>
+                                <option value="oscurecer">Oscurecer</option>
+                                <option value="diferencia">Diferencia</option>
+                                <option value="luminucidad">Luminucidad</option>
+                                <option value="multiplicar">Multiplicar</option>
+                            </select>
                         </li>
                         <li>
                             <h3>FILTROS</h3>
                             <label for="">BRILLO / BRIGHTNESS</label>
-                            <input type="range" min="0" max="100" value="100" id="filter-brightness">
+                            <input type="range" min="0" max="200" value="100" id="filter-brightness">
                         </li>
                         <li>
                             <label for="">OPACIDAD</label>
@@ -84,7 +84,7 @@
                         </li>
                         <li>
                             <label for="">CONTRASTE</label>
-                            <input type="range" min="0" max="100" value="100" id="filter-contrast">
+                            <input type="range" min="0" max="200" value="100" id="filter-contrast">
                         </li>
                         <li>
                             <label for="">DESENFOQUE / BLUR</label>
@@ -104,14 +104,23 @@
                         </li>
                         <li>
                             <label for="">SATURADO</label>
-                            <input type="range" min="0" max="100" value="100" id="filter-saturate">
+                            <input type="range" min="0" max="200" value="100" id="filter-saturate">
                         </li>
                         <li>
                             <label for="">NEGATIVO</label>
                             <input type="range"  min="0" max="100" value="0" id="filter-negative">
                         </li>
-                        <li></li>
+                        <li class="button-reset">
+                            <button type="button" id="button-reset-filter">
+                                <i class="fa-solid fa-arrow-rotate-right"></i>
+                            </button>
+                        </li>
                     </ul>
+                    <!-- <div class="container-button">
+                        <button type="button" id="button-filter">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </button>
+                    </div> -->
                 </form>
             </section>
             <!-- <section id="texto">

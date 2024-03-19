@@ -16,10 +16,11 @@ let inputImage = document.getElementById('input-image');
 let image = document.getElementById('image');
 let inputImageUrl = document.getElementById('input-image-url');
 
-// Change background color div
+// Change background Blend Mode
 let color = document.getElementById('color');
 let containerImg = document.getElementById('container-img');
 let hexaColor = document.getElementById('hexa-color');
+let blendModeFilter = document.getElementById('blendModeFilter');
 
 // Filters
 let filterBrightness = document.getElementById('filter-brightness');
@@ -31,12 +32,15 @@ let filterSepia = document.getElementById('filter-sepia');
 let filterHue = document.getElementById('filter-hue');
 let filterSaturate = document.getElementById('filter-saturate');
 let filterNegative = document.getElementById('filter-negative');
+let buttonResetFilter = document.getElementById('button-reset-filter');
 
 // Open and close window of sections
 botonImg.addEventListener('click', ()=>{
+  console.log("aqui1----")
   sectionImagen.classList.toggle("oculto")
 });
 closeX.addEventListener('click', ()=>{
+  console.log("aqui2----")
   sectionImagen.classList.toggle("oculto")
 });
 
@@ -70,22 +74,47 @@ botonMood.addEventListener('click', () => {
 
 // Aside
 inputImageUrl.addEventListener('input', ()=> {
-  image.src = inputImageUrl.value;
+  // image.src = inputImageUrl.value;
+  // containerImg.style.backgroundImage = 'url("haku.jpg")';
+  containerImg.style.backgroundImage = `url("${inputImageUrl.value}")`;
 });
 
 // inputImage.addEventListener('change', ()=> {
 //   if( inputImage.files ){
-//     image.src = inputImage.value;
-//   } else {
-//     image.src = 'temperatura.png';
-//   }
-// });
+//      image.src = inputImage.value;
+//    } else {
+//      image.src = 'temperatura.png';
+//    }
+//  });
 
-// Background color
+//Background Blend Mode
 color.addEventListener('input', ()=> {
-  containerImg.style.background = color.value;
   hexaColor.textContent = color.value;
+  aplyBlendMode();
 });
+
+blendModeFilter.addEventListener('change', ()=> {
+  
+  containerImg.style.backgroundImage =  aplyBlendMode();
+});
+
+function aplyBlendMode() {
+  if (blendModeFilter.value == 'ninguno'){
+    containerImg.style.backgroundBlendMode = 'normal';
+  } else if (blendModeFilter.value == 'aclarar'){
+    containerImg.style.backgroundBlendMode = 'lighten';
+  } else if (blendModeFilter.value == 'oscurecer'){
+    containerImg.style.backgroundBlendMode = 'darken';
+  } else if (blendModeFilter.value == 'diferencia'){
+    containerImg.style.backgroundBlendMode = 'difference';
+  } else if (blendModeFilter.value == 'luminucidad'){
+    containerImg.style.backgroundBlendMode = 'luminosity';
+  } else if (blendModeFilter.value == 'multiplicar'){
+    containerImg.style.backgroundBlendMode = 'multiply';
+  }
+
+  containerImg.style.backgroundColor = color.value;
+};
 
 // Event filters
 filterBrightness.addEventListener('input', ()=> {
@@ -125,7 +154,6 @@ filterNegative.addEventListener('input', ()=> {
 });
 
 function aplyFilter() {
-  console.log("aaca")
   filterAll = ` brightness(${filterBrightness.value}%)`;
   filterAll += ` opacity(${filterOpacity.value}%)`;
   filterAll += ` contrast(${filterContrast.value}%)`;
@@ -135,8 +163,30 @@ function aplyFilter() {
   filterAll += ` hue-rotate(${filterHue.value}deg)`;
   filterAll += ` invert(${filterNegative.value}%)`;
   filterAll += ` saturate(${filterSaturate.value}%)`;
-  console.log(filterAll)
-  image.style.filter = filterAll;
+
+  containerImg.style.filter = filterAll;
 };
 
-aplyFilter()
+buttonResetFilter.addEventListener('click', () =>{
+  filterBrightness.value = 100;
+  filterOpacity.value = 100;
+  filterContrast.value = 100;
+  filterBlur.value = 0;
+  grayscale.value = 0;
+  filterSepia.value = 0;
+  filterHue.value = 0;
+  filterNegative.value = 0;
+  filterSaturate.value = 100;
+
+  // Blend Mode
+  blendModeFilter.value = 'ninguno';
+  blendModeFilter.value == 'aclarar'
+  blendModeFilter.value == 'oscurecer'
+  blendModeFilter.value == 'diferencia'
+  blendModeFilter.value == 'luminucidad'
+  blendModeFilter.value == 'multiplicar'
+  color.value = "#ffffff";
+  hexaColor.textContent = color.value;
+  aplyFilter();
+  aplyBlendMode();
+});
