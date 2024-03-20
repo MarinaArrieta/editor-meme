@@ -47,11 +47,11 @@
         </div>
         <aside>
             <section  id="section-imagen" class="img oculto">
-                <div class="close-x">
-                    <i class="fa-regular fa-circle-xmark" id="close-x"></i>
+                <div class="close-x-image">
+                    <i class="fa-regular fa-circle-xmark" id="close-x-image"></i>
                 </div>
                 <h2>IMAGEN</h2>
-                <form action="">
+                <form>
                     <ul>
                         <li>
                             <h3>URL</h3>
@@ -116,16 +116,28 @@
                             </button>
                         </li>
                     </ul>
-                    <!-- <div class="container-button">
-                        <button type="button" id="button-filter">
-                            <i class="fa-solid fa-arrow-rotate-right"></i>
-                        </button>
-                    </div> -->
                 </form>
             </section>
-            <!-- <section id="texto">
+            <section id="section-texto" class="texto">
+                <div class="close-text" id="close-x-text">
+                    <i class="fa-regular fa-circle-xmark" id="close-x-text"></i>
+                </div>
                 <h2>TEXTO</h2>
-            </section> -->
+                <form>
+                    <ul>
+                        <li>
+                            <h3>SUPERIOR</h3>
+                            <input type="text" id="input-image-url">
+                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                        </li>
+                        <li>
+                            <h3>INFERIOR</h3>
+                            <input type="text" id="input-image-url">
+                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                        </li>
+                    </ul>
+                </form>
+            </section>
         </aside>
     </main>
     <script src="./assets/js/main.js"></script>

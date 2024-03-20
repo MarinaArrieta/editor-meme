@@ -2,14 +2,16 @@ let botonMood = document.getElementById('boton');
 let backHeader = document.getElementById('back-header');
 let backMain = document.getElementById('back-main');
 let botonImg = document.getElementById('boton-img');
-let closeX = document.getElementById('close-x');
+let closeXImage = document.getElementById('close-x-image');
 let botonText = document.getElementById('boton-text');
+let closeXText = document.getElementById('close-x-text');
 let topText = document.getElementById('top-text');
 let bottomText = document.getElementById('bottom-text');
 let icon = document.getElementById('icon');
 let modo = 'oscuro';
 
 let sectionImagen = document.getElementById('section-imagen');
+let sectionTexto = document.getElementById('section-texto');
 
 // Images: url, img desktop
 let inputImage = document.getElementById('input-image');
@@ -34,14 +36,25 @@ let filterSaturate = document.getElementById('filter-saturate');
 let filterNegative = document.getElementById('filter-negative');
 let buttonResetFilter = document.getElementById('button-reset-filter');
 
-// Open and close window of sections
+// Open and close window of image section
 botonImg.addEventListener('click', ()=>{
   console.log("aqui1----")
-  sectionImagen.classList.toggle("oculto")
+  sectionImagen.classList.toggle("oculto");
 });
-closeX.addEventListener('click', ()=>{
+closeXImage.addEventListener('click', ()=>{
   console.log("aqui2----")
-  sectionImagen.classList.toggle("oculto")
+  sectionImagen.classList.toggle("oculto");
+});
+
+// Open and close window of text section
+botonText.addEventListener('click', ()=>{
+  console.log("aqui1----")
+  sectionTexto.classList.toggle("oculto");
+});
+
+closeXText.addEventListener('click', ()=>{
+  console.log("aqui2----")
+  sectionTexto.classList.toggle("oculto");
 });
 
 // Mood light and dark
@@ -79,13 +92,13 @@ inputImageUrl.addEventListener('input', ()=> {
   containerImg.style.backgroundImage = `url("${inputImageUrl.value}")`;
 });
 
+// function imageLocal() {
+//   containerImg.style.backgroundImage = `url("${inputImage.value}")`;
+// }
+
 // inputImage.addEventListener('change', ()=> {
-//   if( inputImage.files ){
-//      image.src = inputImage.value;
-//    } else {
-//      image.src = 'temperatura.png';
-//    }
-//  });
+//   imageLocal().readAsDataURL;
+// });
 
 //Background Blend Mode
 color.addEventListener('input', ()=> {
