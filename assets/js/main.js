@@ -42,6 +42,10 @@ let notBottomText = document.getElementById('not-bottom-text');
 let fontFamilyP = document.getElementById('font-family-p');
 // Font Size
 let fontSize = document.getElementById('font-size');
+// Align Text
+let textAlignLeft = document.getElementById('text-align-left');
+let textAlignCenter = document.getElementById('text-align-center');
+let textAlignRight = document.getElementById('text-align-right');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -285,4 +289,22 @@ function fontFamilyChange(){
 fontSize.addEventListener('change', ()=> {
   topText.style.fontSize = `${fontSize.value}px`;
   bottomText.style.fontSize = `${fontSize.value}px`;
+});
+
+textAlignLeft.addEventListener('click', ()=> {
+  topText.style.textAlign = `left`;
+  bottomText.style.textAlign = `left`;
+  console.log("left button")
+});
+
+textAlignCenter.addEventListener('click', ()=> {
+  topText.style.textAlign = 'center';
+  bottomText.style.textAlign = 'center';
+  console.log("center button")
+});
+
+textAlignRight.addEventListener('click', ()=> {
+  topText.style.textAlign = 'right';
+  bottomText.style.textAlign = 'right';
+  console.log("right button")
 });
