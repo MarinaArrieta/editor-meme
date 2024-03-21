@@ -32,13 +32,10 @@
     </header>
     <main id="back-main">
         <div class="container-meme">
-            <p id="top-text">TOP TEXT</p>
+            <p id="top-text" class="top-text">TOP TEXT</p>
             <div id="container-img" class="container-img">
-                <!-- <figure>
-                    <img  id="image">
-                </figure> -->
             </div>
-            <p id="bottom-text">BOTTOM TEXT</p>
+            <p id="bottom-text" class="bottom-text">BOTTOM TEXT</p>
             <div class="button">
                 <button>
                     <i class="fa-solid fa-download"></i>
@@ -127,13 +124,85 @@
                     <ul>
                         <li>
                             <h3>SUPERIOR</h3>
-                            <input type="text" id="input-image-url">
-                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                            <input type="text" id="input-top-text">
+                            <div>
+                                Sin texto superior
+                                <input type="checkbox" id="not-top-text"> 
+                            </div>
                         </li>
                         <li>
                             <h3>INFERIOR</h3>
-                            <input type="text" id="input-image-url">
-                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                            <input type="text" id="input-bottom-text">
+                            <div>
+                                Sin texto inferior
+                                <input type="checkbox" id="not-bottom-text"> 
+                            </div>
+                        </li>
+                        <li>
+                            <h3>FUENTE</h3>
+                            <select id="blendModeFilter">
+                                <option value="impact">Impact</option>
+                                <option value="arial">Arial</option>
+                                <option value="aialBlack">Aial Black</option>
+                                <option value="americanTypewriter">American Typewriter</option>
+                                <option value="andaleMono">Andale Mono</option>
+                                <option value="comicSans">Comic Sans MS</option>
+                                <option value="helvetica">Helvetica</option>
+                                <option value="impact">Impact</option>
+                                <option value="verdana">Verdana</option>
+                                <option value="timesNewRoman">Times New Roman</option>
+                            </select>
+                            <input type="number" min="12" max="80" value="12" id="">
+                            <div>
+                                <button>
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button>
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button>
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h3>COLOR</h3>
+                                <div class="container-p-hexa">
+                                    <input type="color" id="color" value="#ffffff">
+                                    <p id="hexa-color">#ffffff</p>
+                                </div>
+                                <h3>FONDO</h3>
+                                <div class="container-p-hexa">
+                                    <input type="color" id="color" value="#ffffff">
+                                    <p id="hexa-color">#ffffff</p>
+                                </div>
+                            </div>
+                            <div>
+                                Fondo transparente
+                                <input type="checkbox" id=""> 
+                            </div>
+                        </li>
+                        <li class="contorno">
+                            <h3>CONTORNO</h3>
+                            <button>Ninguno</button>
+                            <button>Claro</button>
+                            <button>Oscuro</button>
+                        </li>
+                        <li>
+                            <h3>Espaciado</h3>
+                            <input type="number" min="10" max="50" value="10" id="">
+                        </li>
+                        <li>
+                            <h3>Interlineado</h3>
+                            <select id="">
+                                <option value="">0.8</option>
+                                <option value="">1</option>
+                                <option value="">1.2</option>
+                                <option value="">1.5</option>
+                                <option value="">2</option>
+                                <option value="">2.5</option>
+                            </select>
                         </li>
                     </ul>
                 </form>

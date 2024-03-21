@@ -5,25 +5,19 @@ let botonImg = document.getElementById('boton-img');
 let closeXImage = document.getElementById('close-x-image');
 let botonText = document.getElementById('boton-text');
 let closeXText = document.getElementById('close-x-text');
-let topText = document.getElementById('top-text');
-let bottomText = document.getElementById('bottom-text');
 let icon = document.getElementById('icon');
 let modo = 'oscuro';
-
 let sectionImagen = document.getElementById('section-imagen');
 let sectionTexto = document.getElementById('section-texto');
-
 // Images: url, img desktop
 let inputImage = document.getElementById('input-image');
 let image = document.getElementById('image');
 let inputImageUrl = document.getElementById('input-image-url');
-
 // Change background Blend Mode
 let color = document.getElementById('color');
 let containerImg = document.getElementById('container-img');
 let hexaColor = document.getElementById('hexa-color');
 let blendModeFilter = document.getElementById('blendModeFilter');
-
 // Filters
 let filterBrightness = document.getElementById('filter-brightness');
 let filterOpacity = document.getElementById('filter-opacity');
@@ -35,6 +29,15 @@ let filterHue = document.getElementById('filter-hue');
 let filterSaturate = document.getElementById('filter-saturate');
 let filterNegative = document.getElementById('filter-negative');
 let buttonResetFilter = document.getElementById('button-reset-filter');
+// Section Text
+// Top text
+let topText = document.getElementById('top-text');
+let inputTopText = document.getElementById('input-top-text');
+let notTopText = document.getElementById('not-top-text');
+// Bottom text
+let bottomText = document.getElementById('bottom-text');
+let inputBottomText = document.getElementById('input-bottom-text');
+let notBottomText = document.getElementById('not-bottom-text');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -48,12 +51,10 @@ closeXImage.addEventListener('click', ()=>{
 
 // Open and close window of text section
 botonText.addEventListener('click', ()=>{
-  console.log("aqui1----")
   sectionTexto.classList.toggle("oculto");
 });
 
 closeXText.addEventListener('click', ()=>{
-  console.log("aqui2----")
   sectionTexto.classList.toggle("oculto");
 });
 
@@ -203,3 +204,45 @@ buttonResetFilter.addEventListener('click', () =>{
   aplyFilter();
   aplyBlendMode();
 });
+
+// Section Text
+inputTopText.addEventListener('input', ()=> {
+  topText.textContent = inputTopText.value;
+});
+
+notTopText.addEventListener('change', ()=> {
+ if(notTopText.checked){
+   topText.style.display = 'none';
+   containerImg.style.height =  '45vh';
+ } else {
+   topText.style.display = 'flex';
+   containerImg.style.height =  '40vh';
+}
+  checkeo();
+});
+
+inputBottomText.addEventListener('input', ()=> {
+  bottomText.textContent = inputBottomText.value;
+});
+
+notBottomText.addEventListener('change', ()=> {
+ if(notBottomText.checked){
+   bottomText.style.display = 'none';
+   containerImg.style.height =  '45vh';
+ } else {
+   bottomText.style.display = 'flex';
+   containerImg.style.height =  '40vh';
+}
+  checkeo();
+});
+
+function checkeo(){
+  if (notTopText.checked && notBottomText.checked){
+    containerImg.style.height = '50vh';
+  }
+};
+
+// Font family, size and text direction
+bottomText.addEventListener('change', ()=> {
+  
+})

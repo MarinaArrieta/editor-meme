@@ -64,6 +64,9 @@ main{
 }
 
 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--secundary-font);
     background: var(--white);
     font-weight: bold;
@@ -73,12 +76,16 @@ p{
     background: #AE6BF2;
 }
 
-#top-tex{
+.top-text{
     border-radius: 5px 5px 0px 0px;
+    height: 5vh;
+    padding: 5px;
 }
 
-#bottom-text{
+.bottom-text{
     border-radius: 0px 0px 5px 5px;
+    height: 5vh;
+    padding: 5px;
 }
 
 .container-img{
@@ -156,7 +163,7 @@ form ul{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 80vh;
+    /* height: 80vh; */
     width: 90%;
 }
 
@@ -232,4 +239,8 @@ h3{
     font-size: 1.6rem;
     margin-right: 47px;
     padding: 8px 8px 0px 0px;
+}
+
+.contorno{
+    flex-direction: unset;
 }
