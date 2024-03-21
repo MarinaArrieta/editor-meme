@@ -63,6 +63,11 @@ main{
     overflow: hidden;
 }
 
+.container-img-p{
+    width: 100%;
+    height: 50vh;
+}
+
 p{
     display: flex;
     align-items: center;
@@ -245,6 +250,7 @@ h3{
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 
 .close-x-text {

@@ -51,6 +51,8 @@ let colorP = document.getElementById('color-p');
 let colorBackP = document.getElementById('color-back-p');
 let hexaColorP = document.getElementById('hexa-color-p');
 let hexaColorBack = document.getElementById('hexa-color-back');
+// Background transparent
+let backgroundTransparent = document.getElementById('background-transparent');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -228,10 +230,11 @@ notTopText.addEventListener('change', ()=> {
    topText.style.display = 'none';
    containerImg.style.height =  '45vh';
  } else {
-   topText.style.display = 'flex';
+   topText.style.display = 'block';
    containerImg.style.height =  '40vh';
 }
   checkeo();
+  checkeoTransparenText();
 });
 
 inputBottomText.addEventListener('input', ()=> {
@@ -243,10 +246,11 @@ notBottomText.addEventListener('change', ()=> {
    bottomText.style.display = 'none';
    containerImg.style.height =  '45vh';
  } else {
-   bottomText.style.display = 'flex';
+   bottomText.style.display = 'block';
    containerImg.style.height =  '40vh';
 }
   checkeo();
+  checkeoTransparenText();
 });
 
 function checkeo(){
@@ -299,19 +303,43 @@ fontSize.addEventListener('change', ()=> {
 textAlignLeft.addEventListener('click', ()=> {
   topText.style.textAlign = `left`;
   bottomText.style.textAlign = `left`;
-  console.log("left button")
+  checkeoTransparenText()
+});
+textAlignLeft.addEventListener('click', ()=> {
+  bottomText.style.textAlign = `left`;
+  checkeoTransparenText()
+});
+textAlignLeft.addEventListener('click', ()=> {
+  topText.style.textAlign = `left`;
+  checkeoTransparenText()
 });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   bottomText.style.textAlign = 'center';
-  console.log("center button")
+  checkeoTransparenText()
+});
+textAlignCenter.addEventListener('click', ()=> {
+  topText.style.textAlign = 'center';
+  checkeoTransparenText()
+});
+textAlignCenter.addEventListener('click', ()=> {
+  bottomText.style.textAlign = 'center';
+  checkeoTransparenText()
 });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
-  console.log("right button")
+  checkeoTransparenText()
+});
+textAlignRight.addEventListener('click', ()=> {
+  topText.style.textAlign = 'right';
+  checkeoTransparenText()
+});
+textAlignRight.addEventListener('click', ()=> {
+  bottomText.style.textAlign = 'right';
+  checkeoTransparenText()
 });
 
 // Color text and back
@@ -336,3 +364,48 @@ colorBackP.addEventListener('input', ()=> {
   bottomText.value = "#181b2c";
   bottomText.style.backgroundColor = colorBackP.value;
 });
+
+backgroundTransparent.addEventListener('change', ()=> {
+  checkeoTransparent();
+  checkeoTransparenText();
+});
+
+function checkeoTransparent(){
+  if (backgroundTransparent.checked){
+    topText.style.backgroundColor = 'transparent';
+    topText.style.position = 'absolute';
+    topText.style.width = '90%';
+    topText.style.zIndex = 1;
+    bottomText.style.backgroundColor = 'transparent';
+    bottomText.style.position = 'absolute';
+    bottomText.style.width = '90%';
+    bottomText.style.zIndex = 1;
+    bottomText.style.bottom = '179px';
+    containerImg.style.position = 'relative';
+    containerImg.style.zIndex = 0;
+    containerImg.style.height = '50vh';
+  }else{
+    topText.style.position = 'unset';
+    bottomText.style.position = 'unset';
+    containerImg.style.position = 'unset';
+    topText.style.backgroundColor = 'none';
+  }
+};
+
+function checkeoTransparenText(){
+  console.log("dentro de checkeoTransparenText")
+  if(backgroundTransparent.checked && notTopText.checked){
+    containerImg.style.height = '50vh';
+  }else if(backgroundTransparent.checked && notTopText.checked){
+    containerImg.style.height = '50vh';
+  }else if(backgroundTransparent.checked && notBottomText.checked==true){
+  console.log("aca zzzz c 1");
+    containerImg.style.height = '50vh';
+  } else if(backgroundTransparent.checked && notBottomText.checked==false){
+    containerImg.style.height = '50vh';
+  }else if(backgroundTransparent.checked==false){
+    containerImg.style.height = '40vh';
+    topText.style.backgroundColor = '#AE6BF2';
+    bottomText.style.backgroundColor = '#AE6BF2';
+  }
+};
