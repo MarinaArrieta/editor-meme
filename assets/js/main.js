@@ -40,6 +40,8 @@ let inputBottomText = document.getElementById('input-bottom-text');
 let notBottomText = document.getElementById('not-bottom-text');
 // Family
 let fontFamilyP = document.getElementById('font-family-p');
+// Font Size
+let fontSize = document.getElementById('font-size');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -279,3 +281,8 @@ function fontFamilyChange(){
     topText.style.fontFamily = 'Times New Roman';
   }
 };
+
+fontSize.addEventListener('change', ()=> {
+  topText.style.fontSize = `${fontSize.value}px`;
+  bottomText.style.fontSize = `${fontSize.value}px`;
+});

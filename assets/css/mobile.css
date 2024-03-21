@@ -78,14 +78,16 @@ p{
 
 .top-text{
     border-radius: 5px 5px 0px 0px;
-    height: 5vh;
+    /* height: 5vh; */
+    font-size: 30px;
     padding: 5px;
     font-family: Impact;
 }
 
 .bottom-text{
     border-radius: 0px 0px 5px 5px;
-    height: 5vh;
+    /* height: 5vh; */
+    font-size: 30px;
     padding: 5px;
     font-family: Impact;
 }
