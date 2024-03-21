@@ -46,6 +46,11 @@ let fontSize = document.getElementById('font-size');
 let textAlignLeft = document.getElementById('text-align-left');
 let textAlignCenter = document.getElementById('text-align-center');
 let textAlignRight = document.getElementById('text-align-right');
+// Color text and back
+let colorP = document.getElementById('color-p');
+let colorBackP = document.getElementById('color-back-p');
+let hexaColorP = document.getElementById('hexa-color-p');
+let hexaColorBack = document.getElementById('hexa-color-back');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -307,4 +312,27 @@ textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
   console.log("right button")
+});
+
+// Color text and back
+colorP.addEventListener('input', ()=> {
+  hexaColorP.textContent = colorP.value;
+  topText.value = "#181b2c";
+  topText.style.color = colorP.value;
+});
+
+colorP.addEventListener('input', ()=> {
+  hexaColorP.textContent = colorP.value;
+  topText.value = "#181b2c";
+  topText.style.color = colorP.value;
+  bottomText.value = "#181b2c";
+  bottomText.style.color = colorP.value;
+});
+
+colorBackP.addEventListener('input', ()=> {
+  hexaColorBack.textContent = colorBackP.value;
+  topText.value = "#181b2c";
+  topText.style.backgroundColor = colorBackP.value;
+  bottomText.value = "#181b2c";
+  bottomText.style.backgroundColor = colorBackP.value;
 });
