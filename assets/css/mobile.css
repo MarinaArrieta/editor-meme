@@ -80,12 +80,14 @@ p{
     border-radius: 5px 5px 0px 0px;
     height: 5vh;
     padding: 5px;
+    font-family: Impact;
 }
 
 .bottom-text{
     border-radius: 0px 0px 5px 5px;
     height: 5vh;
     padding: 5px;
+    font-family: Impact;
 }
 
 .container-img{

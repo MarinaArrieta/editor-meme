@@ -38,6 +38,8 @@ let notTopText = document.getElementById('not-top-text');
 let bottomText = document.getElementById('bottom-text');
 let inputBottomText = document.getElementById('input-bottom-text');
 let notBottomText = document.getElementById('not-bottom-text');
+// Family
+let fontFamilyP = document.getElementById('font-family-p');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -243,6 +245,37 @@ function checkeo(){
 };
 
 // Font family, size and text direction
-bottomText.addEventListener('change', ()=> {
-  
-})
+fontFamilyP.addEventListener('change', ()=> {
+  fontFamilyChange();
+});
+
+function fontFamilyChange(){
+  if (fontFamilyP.value == 'impact'){
+    bottomText.style.fontFamily = 'impact';
+    topText.style.fontFamily = 'impact';
+  } else if (fontFamilyP.value == 'arial'){
+    bottomText.style.fontFamily = 'Arial';
+    topText.style.fontFamily = 'Arial';
+  } else if (fontFamilyP.value == 'arialBlack'){
+    bottomText.style.fontFamily = 'Arial Black';
+    topText.style.fontFamily = 'Arial Black';
+  } else if (fontFamilyP.value == 'americanTypewriter'){
+    bottomText.style.fontFamily = 'American Typewriter';
+    topText.style.fontFamily = 'American Typewriter';
+  } else if (fontFamilyP.value == 'andaleMono'){
+    bottomText.style.fontFamily = 'andale mono';
+    topText.style.fontFamily = 'andale mono';
+  } else if (fontFamilyP.value == 'comicSans'){
+    bottomText.style.fontFamily = 'Comic Sans MS';
+    topText.style.fontFamily = 'Comic Sans MS';
+  } else if (fontFamilyP.value == 'helvetica'){
+    bottomText.style.fontFamily = 'Helvetica';
+    topText.style.fontFamily = 'Helvetica';
+  } else if (fontFamilyP.value == 'verdana'){
+    bottomText.style.fontFamily = 'Verdana';
+    topText.style.fontFamily = 'Verdana';
+  } else if (fontFamilyP.value == 'timesNewRoman'){
+    bottomText.style.fontFamily = 'Times New Roman';
+    topText.style.fontFamily = 'Times New Roman';
+  }
+};
