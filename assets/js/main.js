@@ -53,6 +53,10 @@ let hexaColorP = document.getElementById('hexa-color-p');
 let hexaColorBack = document.getElementById('hexa-color-back');
 // Background transparent
 let backgroundTransparent = document.getElementById('background-transparent');
+// Contorn
+let contornoPNone = document.getElementById('contorno-p-none');
+let contornoPLight = document.getElementById('contorno-p-light');
+let contornoPDark = document.getElementById('contorno-p-dark');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -409,3 +413,18 @@ function checkeoTransparenText(){
     bottomText.style.backgroundColor = '#AE6BF2';
   }
 };
+
+contornoPNone.addEventListener('click', ()=> {
+  topText.style.textShadow = '0 0 transparent';
+  bottomText.style.textShadow = '0 0 transparent';
+});
+
+contornoPLight.addEventListener('click', ()=> {
+  topText.style.textShadow = 'rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+  bottomText.style.textShadow = 'rgb(255, 255, 255) 2px 2px, rgb(255, 255, 255) -2px 2px, rgb(255, 255, 255) 2px -2px, rgb(255, 255, 255) -2px -2px';
+});
+
+contornoPDark.addEventListener('click', ()=> {
+  topText.style.textShadow = 'rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px';
+  bottomText.style.textShadow = 'rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px';
+});
