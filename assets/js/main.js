@@ -59,6 +59,8 @@ let contornoPLight = document.getElementById('contorno-p-light');
 let contornoPDark = document.getElementById('contorno-p-dark');
 // Space - padding
 let paddingP = document.getElementById('padding-p');
+// line-height
+let lineHeightP = document.getElementById('line-height-p');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -434,4 +436,9 @@ contornoPDark.addEventListener('click', ()=> {
 paddingP.addEventListener('change', ()=> {
   topText.style.padding = `${paddingP.value}px 30px`;
   bottomText.style.padding = `${paddingP.value}px 30px`;
+});
+
+lineHeightP.addEventListener('change', ()=> {
+  topText.style.lineHeight = lineHeightP.value;
+    bottomText.style.lineHeight = lineHeightP.value;
 });
