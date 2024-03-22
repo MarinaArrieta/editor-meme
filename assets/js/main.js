@@ -57,6 +57,8 @@ let backgroundTransparent = document.getElementById('background-transparent');
 let contornoPNone = document.getElementById('contorno-p-none');
 let contornoPLight = document.getElementById('contorno-p-light');
 let contornoPDark = document.getElementById('contorno-p-dark');
+// Space - padding
+let paddingP = document.getElementById('padding-p');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
@@ -427,4 +429,9 @@ contornoPLight.addEventListener('click', ()=> {
 contornoPDark.addEventListener('click', ()=> {
   topText.style.textShadow = 'rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px';
   bottomText.style.textShadow = 'rgb(0, 0, 0) 2px 2px, rgb(0, 0, 0) -2px 2px, rgb(0, 0, 0) 2px -2px, rgb(0, 0, 0) -2px -2px';
+});
+
+paddingP.addEventListener('change', ()=> {
+  topText.style.padding = `${paddingP.value}px 30px`;
+  bottomText.style.padding = `${paddingP.value}px 30px`;
 });
