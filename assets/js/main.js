@@ -381,14 +381,15 @@ backgroundTransparent.addEventListener('change', ()=> {
 function checkeoTransparent(){
   if (backgroundTransparent.checked){
     topText.style.backgroundColor = 'transparent';
-    topText.style.position = 'absolute';
-    topText.style.width = '90%';
+    topText.style.position = 'relative';
+    topText.style.width = '100%';
     topText.style.zIndex = 1;
+    topText.style.top = '55px';
     bottomText.style.backgroundColor = 'transparent';
-    bottomText.style.position = 'absolute';
-    bottomText.style.width = '90%';
+    bottomText.style.position = 'relative';
+    bottomText.style.width = '100%';
     bottomText.style.zIndex = 1;
-    bottomText.style.bottom = '179px';
+    bottomText.style.bottom = '55px';
     containerImg.style.position = 'relative';
     containerImg.style.zIndex = 0;
     containerImg.style.height = '50vh';
