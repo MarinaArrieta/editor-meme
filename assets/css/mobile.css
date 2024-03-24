@@ -5,10 +5,6 @@
 }
 
 body{
-    /* background: 
-    repeating-radial-gradient(#535c8f 0 0.0001%, #b1b3eb 0 0.0002%, #FF9800 0 0.0003%) 50% 0 / 2500px 2500px, 
-    repeating-conic-gradient(#07010a 0 0.0001%, #f4ff9b 0 0.0002%) 60% 60% / 2500px 2500px;
-    background-blend-mode: darken; */
     background: repeating-radial-gradient(#0c1753 0 0.0001%, #060851 0 0.0002%, #3d42dd 0 0.0006%) 50% 0 / 2500px 2500px, 
     repeating-conic-gradient(#01010a 0 0.0001%, #e0e5b5 0 0.0002%, #18041c 0 0.0003%) 60% 60% / 2500px 2500px;
     background-blend-mode: darken;
@@ -43,7 +39,6 @@ button{
     border: 0;
     font-family: var(--secundary-font);
     font-weight: bold;
-    /* background: #f5e4af; */
     background: #9afb29;
     padding: 9px;
     border-radius: 10px;
@@ -51,8 +46,6 @@ button{
 }
 
 button:hover{
-    /* background: var(--yellow); */
-    /* color: var(--blue); */
     transform: rotate(-9deg);
     transition-duration: 0.7s;
 }
@@ -139,12 +132,6 @@ img{
     height: 13vh;
 }
 
-/* .button button:hover{
-    background-color: var(--yellow);
-    font-weight: bold;
-    color: var(--blue);
-} */
-
 .oculto{
     display: none;
 }
@@ -168,10 +155,6 @@ img{
     padding: 8px 8px 0px 0px;
 }
 
-/* #close-x-image{
-    padding: 8px 8px 0px 0px;
-} */
-
 h2{
     text-align: center;
 }
@@ -188,7 +171,6 @@ form ul{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* height: 80vh; */
     width: 90%;
 }
 
