@@ -4,17 +4,28 @@
     box-sizing: border-box;
 }
 
+body{
+    /* background: 
+    repeating-radial-gradient(#535c8f 0 0.0001%, #b1b3eb 0 0.0002%, #FF9800 0 0.0003%) 50% 0 / 2500px 2500px, 
+    repeating-conic-gradient(#07010a 0 0.0001%, #f4ff9b 0 0.0002%) 60% 60% / 2500px 2500px;
+    background-blend-mode: darken; */
+    background: repeating-radial-gradient(#0c1753 0 0.0001%, #060851 0 0.0002%, #3d42dd 0 0.0006%) 50% 0 / 2500px 2500px, 
+    repeating-conic-gradient(#01010a 0 0.0001%, #e0e5b5 0 0.0002%, #18041c 0 0.0003%) 60% 60% / 2500px 2500px;
+    background-blend-mode: darken;
+}
+
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 20vh;
-    background: #140e21;
+    background: #020c21;
+    border-bottom: 1px solid #1d3b49;
 }
 
 h1{
-    color: var(--pink);
+    color: #58c5f9;
     font-family: var(--primary-font);
     font-weight: bold;
     font-size: 1.9rem;
@@ -32,15 +43,16 @@ button{
     border: 0;
     font-family: var(--secundary-font);
     font-weight: bold;
-    background: #f5e4af;
+    /* background: #f5e4af; */
+    background: #9afb29;
     padding: 9px;
     border-radius: 10px;
     font-size: 1.1rem;
 }
 
 button:hover{
-    background: var(--yellow);
-    color: var(--blue);
+    /* background: var(--yellow); */
+    /* color: var(--blue); */
     transform: rotate(-9deg);
     transition-duration: 0.7s;
 }
@@ -55,7 +67,7 @@ main{
     align-items: center;
     height: 80vh;
     background-size: 20px 20px;
-    background: #140e21;
+    background-image: linear-gradient(120deg, #000000e8 0%, #2894e973 100%);
 }
 
 .container-meme{
@@ -65,7 +77,6 @@ main{
 
 .container-img-p{
     width: 100%;
-    /* height: 50vh; */
 }
 
 p{
@@ -78,15 +89,12 @@ p{
     text-align: center;
     color: var(--blue);
     padding: 5px;
-    background: #AE6BF2;
+    background: #70d8e5;
 }
 
 .top-text{
     display: block;
-    /* justify-content: unset; */
-    /* width: 100%; */
     border-radius: 5px 5px 0px 0px;
-    /* height: 5vh; */
     font-size: 30px;
     padding: 10px 50px;
     font-family: Impact;
@@ -96,10 +104,7 @@ p{
 
 .bottom-text{
     display: block;
-    /* justify-content: unset; */
-    /* width: 100%; */
     border-radius: 0px 0px 5px 5px;
-    /* height: 5vh; */
     font-size: 30px;
     padding: 10px 50px;
     font-family: Impact;
@@ -110,10 +115,11 @@ p{
 .container-img{
     width: 100%;
     height: 40vh;
-    background: #ffffff;
+    background: #020c21;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+    background-blend-mode: difference;
+ }
 
 figure{
     width: 100%;
@@ -133,11 +139,11 @@ img{
     height: 13vh;
 }
 
-.button button:hover{
+/* .button button:hover{
     background-color: var(--yellow);
     font-weight: bold;
     color: var(--blue);
-}
+} */
 
 .oculto{
     display: none;

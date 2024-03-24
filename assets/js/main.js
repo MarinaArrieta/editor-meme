@@ -5,6 +5,7 @@ let botonImg = document.getElementById('boton-img');
 let closeXImage = document.getElementById('close-x-image');
 let botonText = document.getElementById('boton-text');
 let closeXText = document.getElementById('close-x-text');
+let buttonDownload = document.getElementById('button-download');
 let icon = document.getElementById('icon');
 let modo = 'oscuro';
 let sectionImagen = document.getElementById('section-imagen');
@@ -64,11 +65,9 @@ let lineHeightP = document.getElementById('line-height-p');
 
 // Open and close window of image section
 botonImg.addEventListener('click', ()=>{
-  console.log("aqui1----")
   sectionImagen.classList.toggle("oculto");
 });
 closeXImage.addEventListener('click', ()=>{
-  console.log("aqui2----")
   sectionImagen.classList.toggle("oculto");
 });
 
@@ -85,25 +84,44 @@ closeXText.addEventListener('click', ()=>{
 botonMood.addEventListener('click', () => {
     if (modo === 'claro'){
         backHeader.style.backgroundColor = '#140e21';
-        backMain.style.background = '#140e21';
+        document.querySelector("h1").style.color = '#58c5f9';
         boton.style.color = 'var(--blue)';
-        boton.style.backgroundColor = '#f5e4af';
+        boton.style.backgroundColor = '#9afb29';
         botonImg.style.color = 'var(--blue)';
-        botonImg.style.backgroundColor = '#f5e4af';
+        botonImg.style.backgroundColor = '#9afb29';
         botonText.style.color = 'var(--blue)';
-        botonText.style.backgroundColor = '#f5e4af';
+        botonText.style.backgroundColor = '#9afb29';
         botonText.style.color = 'var(--blue)';
+        buttonDownload.style.backgroundColor = '#9afb29';
+        buttonDownload.style.color = 'var(--blue)';
         icon.className = 'fa-solid fa-sun';
+        document.querySelector("body").style.background = "repeating-radial-gradient(#0c1753 0 0.0001%, #060851 0 0.0002%, #3d42dd 0 0.0006%) 50% 0 / 2500px 2500px,repeating-conic-gradient(#01010a 0 0.0001%, #e0e5b5 0 0.0002%, #18041c 0 0.0003%) 60% 60% / 2500px 2500px";
+        document.querySelector("body").style.backgroundBlendMode = 'darken';
+        backMain.style.backgroundImage = 'linear-gradient(120deg, #000000e8 0%, #2894e973 100%)';
+        backHeader.style.borderBottom = '1px solid #1d3b49';
+        topText.style.background = '#70d8e5';
+        bottomText.style.background = '#70d8e5';
+        containerImg.style.background = 'var(--blue)';
         modo = 'oscuro';
     } else {
-        backHeader.style.backgroundColor = '#f5e4af';
-        backMain.style.background = '#f5e4af';
-        boton.style.color = 'var(--green)';
-        boton.style.backgroundColor = '#181b2c';
-        botonImg.style.color = 'var(--green)';
-        botonImg.style.backgroundColor = '#181b2c';
-        botonText.style.color = 'var(--green)';
-        botonText.style.backgroundColor = '#181b2c';
+        console.log("aca")
+        document.querySelector("body").style.background = "repeating-radial-gradient(#230a0a 0 0.0001%, #edb200 0 0.0002%, #e78f74 0 0.0006%) 50% 0 / 2500px 2500px, repeating-conic-gradient(#4b3232 0 0.0001%, #f3fba6 0 0.0002%, #7f5517 0 0.0003%) 60% 60% / 2500px 2500px";
+        document.querySelector("body").style.backgroundBlendMode = 'lighten';
+        backHeader.style.backgroundColor = '#da67ed';
+        topText.style.background = '#da67ed';
+        bottomText.style.background = '#da67ed';
+        document.querySelector("h1").style.color = '#020c21';
+        containerImg.style.background = '#FFEB3B';
+        backHeader.style.borderBottom = '1px solid #f9f9f9';
+        backMain.style.backgroundImage = 'linear-gradient(120deg, rgb(255 229 151 / 98%) 0%, rgb(19 47 5 / 39%) 100%)';
+        boton.style.color = '#9afb29';
+        boton.style.backgroundColor = '#6006ff';
+        botonImg.style.color = '#9afb29';
+        botonImg.style.backgroundColor = '#6006ff';
+        botonText.style.color = '#9afb29';
+        botonText.style.backgroundColor = '#6006ff';
+        buttonDownload.style.backgroundColor = '#6006ff';
+        buttonDownload.style.color = '#9afb29';
         icon.className = 'fa-solid fa-moon';
         modo = 'claro';
     }
@@ -111,8 +129,6 @@ botonMood.addEventListener('click', () => {
 
 // Aside
 inputImageUrl.addEventListener('input', ()=> {
-  // image.src = inputImageUrl.value;
-  // containerImg.style.backgroundImage = 'url("haku.jpg")';
   containerImg.style.backgroundImage = `url("${inputImageUrl.value}")`;
 });
 
@@ -216,12 +232,12 @@ buttonResetFilter.addEventListener('click', () =>{
   filterSaturate.value = 100;
 
   // Blend Mode
-  blendModeFilter.value = 'ninguno';
-  blendModeFilter.value == 'aclarar'
-  blendModeFilter.value == 'oscurecer'
-  blendModeFilter.value == 'diferencia'
-  blendModeFilter.value == 'luminucidad'
-  blendModeFilter.value == 'multiplicar'
+  // blendModeFilter.value = 'ninguno';
+  // blendModeFilter.value == 'aclarar'
+  // blendModeFilter.value == 'oscurecer'
+  // blendModeFilter.value == 'diferencia'
+  // blendModeFilter.value == 'luminucidad'
+  // blendModeFilter.value == 'multiplicar'
   color.value = "#ffffff";
   hexaColor.textContent = color.value;
   aplyFilter();
