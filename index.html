@@ -126,19 +126,19 @@
                 <ul id="list-image" class="botones oculto">
                     <li>
                         <!-- <label>IMAGEN</label> -->
-                        <label>URL</label>
+                        <label id="label-url">URL</label>
                         <input type="url" placeholder="Ingrese url..." id="input-image-url">
                         <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
                     </li>
                 </ul>
                 <ul id="fondos" class="botones oculto">
                     <li>
-                        <label>FONDO</label>
+                        <label id="label-background">FONDO</label>
                             <input type="color" id="color" value="#58c5f9">
                             <p id="hexa-color">#58c5f9</p>
                     </li>
                     <li>
-                        <label>BLEND MODE</label>
+                        <label id="label-blend">BLEND MODE</label>
                         <select id="blendModeFilter">
                             <option value="ninguno">Ninguno</option>
                             <option value="aclarar">Aclarar</option>
@@ -151,39 +151,39 @@
                 </ul>
                     <ul id="filtros" class="botones oculto">
                         <li>
-                            <label for="">BRILLO</label>
+                            <label id="label-brightness">BRILLO</label>
                             <input type="range" min="0" max="200" value="100" id="filter-brightness">
                         </li>
                         <li>
-                            <label for="">OPACIDAD</label>
+                            <label id="label-opacity">OPACIDAD</label>
                             <input type="range" min="0" max="100" value="100" id="filter-opacity">
                         </li>
                         <li>
-                            <label for="">CONTRASTE</label>
+                            <label id="label-contrast">CONTRASTE</label>
                             <input type="range" min="0" max="200" value="100" id="filter-contrast">
                         </li>
                         <li>
-                            <label for="">DESENFOQUE</label>
+                            <label id="label-blur">DESENFOQUE</label>
                             <input type="range" min="0" max="100" value="0" id="filter-blur">
                         </li>
                         <li>
-                            <label for="">ESCALA DE GRISES</label>
+                            <label id="label-grayscale">ESCALA DE GRISES</label>
                             <input type="range" min="0" max="50" value="0" id="grayscale">
                         </li>
                         <li>
-                            <label>SEPIA</label>
+                            <label id="label-sepia">SEPIA</label>
                             <input id="filter-sepia" type="range" min="0" max="100" value="0">
                         </li>
                         <li>
-                            <label for="">MATIZ</label>
+                            <label id="label-hue">MATIZ</label>
                             <input type="range" min="0" max="360" value="0" id="filter-hue">
                         </li>
                         <li>
-                            <label for="">SATURADO</label>
+                            <label id="label-saturate">SATURADO</label>
                             <input type="range" min="0" max="200" value="100" id="filter-saturate">
                         </li>
                         <li>
-                            <label for="">NEGATIVO</label>
+                            <label id="label-invert">NEGATIVO</label>
                             <input type="range"  min="0" max="100" value="0" id="filter-negative">
                         </li>
                         <li class="button-reset">
@@ -300,7 +300,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; Marina Arrieta</p>
+        <p id="color-p-footer">&copy; Marina Arrieta</p>
     </footer>
     <script src="./assets/js/main.js"></script>
 </body>
