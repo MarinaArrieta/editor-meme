@@ -1,3 +1,15 @@
 .container-meme {
     width: 860px;
 }
+
+#list-image li {
+    width: 60%;
+}
+
+#fondos li {
+    width: 60%;
+}
+
+#filtros li {
+    width: 33%;
+}
