@@ -31,7 +31,7 @@
         </nav>
     </header>
     <main id="back-main">
-        <div class="container-meme">
+        <!-- <div class="container-meme">
             <div class="container-img-p">
                 <p id="top-text" class="top-text">TOP TEXT</p>
                 <div id="container-img" class="container-img">
@@ -43,9 +43,9 @@
                     <i class="fa-solid fa-download"></i>
                 </button>
             </div>
-        </div>
+        </div> -->
         <aside>
-            <section  id="section-imagen" class="img oculto">
+            <!-- <section  id="section-imagen" class="img oculto">
                 <div class="close-x-image">
                     <i class="fa-regular fa-circle-xmark" id="close-x-image"></i>
                 </div>
@@ -116,6 +116,83 @@
                         </li>
                     </ul>
                 </form>
+            </section> -->
+            <section  id="section-imagen">
+                <div id="bottons" class="img oculto">
+                    <button id="image-button">IMAGEN</button>
+                    <button id="fondo">FONDO</button>
+                    <button id="filtro">FILTROS</button>
+                </div>
+                <ul id="list-image" class="botones oculto">
+                    <li>
+                        <!-- <label>IMAGEN</label> -->
+                        <label>URL</label>
+                        <input type="url" placeholder="Ingrese url..." id="input-image-url">
+                        <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
+                    </li>
+                </ul>
+                <ul id="fondos" class="botones oculto">
+                    <li>
+                        <label>FONDO</label>
+                            <input type="color" id="color" value="#58c5f9">
+                            <p id="hexa-color">#58c5f9</p>
+                    </li>
+                    <li>
+                        <label>BLEND MODE</label>
+                        <select id="blendModeFilter">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="aclarar">Aclarar</option>
+                            <option value="oscurecer">Oscurecer</option>
+                            <option value="diferencia">Diferencia</option>
+                            <option value="luminucidad">Luminucidad</option>
+                            <option value="multiplicar">Multiplicar</option>
+                        </select>
+                    </li>
+                </ul>
+                    <ul id="filtros" class="botones oculto">
+                        <li>
+                            <label for="">BRILLO</label>
+                            <input type="range" min="0" max="200" value="100" id="filter-brightness">
+                        </li>
+                        <li>
+                            <label for="">OPACIDAD</label>
+                            <input type="range" min="0" max="100" value="100" id="filter-opacity">
+                        </li>
+                        <li>
+                            <label for="">CONTRASTE</label>
+                            <input type="range" min="0" max="200" value="100" id="filter-contrast">
+                        </li>
+                        <li>
+                            <label for="">DESENFOQUE</label>
+                            <input type="range" min="0" max="100" value="0" id="filter-blur">
+                        </li>
+                        <li>
+                            <label for="">ESCALA DE GRISES</label>
+                            <input type="range" min="0" max="50" value="0" id="grayscale">
+                        </li>
+                        <li>
+                            <label>SEPIA</label>
+                            <input id="filter-sepia" type="range" min="0" max="100" value="0">
+                        </li>
+                        <li>
+                            <label for="">MATIZ</label>
+                            <input type="range" min="0" max="360" value="0" id="filter-hue">
+                        </li>
+                        <li>
+                            <label for="">SATURADO</label>
+                            <input type="range" min="0" max="200" value="100" id="filter-saturate">
+                        </li>
+                        <li>
+                            <label for="">NEGATIVO</label>
+                            <input type="range"  min="0" max="100" value="0" id="filter-negative">
+                        </li>
+                        <li class="button-reset">
+                            <button type="button" id="button-reset-filter">
+                                <!-- <i class="fa-solid fa-arrow-rotate-right"></i> -->
+                                Resetear
+                            </button>
+                        </li>
+                    </ul>
             </section>
             <section id="section-texto" class="texto oculto">
                 <div class="close-text" id="close-x-text">
@@ -209,6 +286,19 @@
                 </form>
             </section>
         </aside>
+        <div class="container-meme">
+            <div class="container-img-p">
+                <p id="top-text" class="top-text">TOP TEXT</p>
+                <div id="container-img" class="container-img">
+                </div>
+                <p id="bottom-text" class="bottom-text">BOTTOM TEXT</p>
+            </div>
+            <div class="button">
+                <button id="button-download">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+            </div>
+        </div>
     </main>
     <script src="./assets/js/main.js"></script>
 </body>

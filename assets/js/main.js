@@ -63,22 +63,44 @@ let paddingP = document.getElementById('padding-p');
 // line-height
 let lineHeightP = document.getElementById('line-height-p');
 
+// PRUEBA
+let imageButton = document.getElementById('image-button');
+let listImage = document.getElementById('list-image');
+let fondo = document.getElementById('fondo');
+let fondos = document.getElementById('fondos');
+let filtro = document.getElementById('filtro');
+let filtros = document.getElementById('filtros');
+
+botonImg.addEventListener('click', ()=> {
+  bottons.classList.toggle('oculto');
+});
+imageButton.addEventListener('click', ()=> {
+  listImage.classList.toggle('oculto');
+})
+
+fondo.addEventListener('click', ()=> {
+  fondos.classList.toggle('oculto');
+});
+filtro.addEventListener('click', ()=> {
+  filtros.classList.toggle('oculto');
+});
+
 // Open and close window of image section
-botonImg.addEventListener('click', ()=>{
-  sectionImagen.classList.toggle("oculto");
-});
-closeXImage.addEventListener('click', ()=>{
-  sectionImagen.classList.toggle("oculto");
-});
+// botonImg.addEventListener('click', ()=>{
+//   sectionImagen.classList.toggle("oculto");
+// });
+// closeXImage.addEventListener('click', ()=>{
+//   sectionImagen.classList.toggle("oculto");
+// });
 
 // Open and close window of text section
-botonText.addEventListener('click', ()=>{
-  sectionTexto.classList.toggle("oculto");
-});
+// botonText.addEventListener('click', ()=>{
+//   sectionTexto.classList.toggle("oculto");
+// });
 
-closeXText.addEventListener('click', ()=>{
-  sectionTexto.classList.toggle("oculto");
-});
+// closeXText.addEventListener('click', ()=>{
+//   sectionTexto.classList.toggle("oculto");
+// });
 
 // Mood light and dark
 botonMood.addEventListener('click', () => {
@@ -238,7 +260,7 @@ buttonResetFilter.addEventListener('click', () =>{
   // blendModeFilter.value == 'diferencia'
   // blendModeFilter.value == 'luminucidad'
   // blendModeFilter.value == 'multiplicar'
-  color.value = "#ffffff";
+  color.value = "#58c5f9";
   hexaColor.textContent = color.value;
   aplyFilter();
   aplyBlendMode();
@@ -333,10 +355,10 @@ textAlignLeft.addEventListener('click', ()=> {
   bottomText.style.textAlign = `left`;
   checkeoTransparenText()
 });
-textAlignLeft.addEventListener('click', ()=> {
-  topText.style.textAlign = `left`;
-  checkeoTransparenText()
-});
+// textAlignLeft.addEventListener('click', ()=> {
+//   topText.style.textAlign = `left`;
+//   checkeoTransparenText()
+// });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
@@ -347,10 +369,10 @@ textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   checkeoTransparenText()
 });
-textAlignCenter.addEventListener('click', ()=> {
-  bottomText.style.textAlign = 'center';
-  checkeoTransparenText()
-});
+// textAlignCenter.addEventListener('click', ()=> {
+//   bottomText.style.textAlign = 'center';
+//   checkeoTransparenText()
+// });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
@@ -361,10 +383,10 @@ textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   checkeoTransparenText()
 });
-textAlignRight.addEventListener('click', ()=> {
-  bottomText.style.textAlign = 'right';
-  checkeoTransparenText()
-});
+// textAlignRight.addEventListener('click', ()=> {
+//   bottomText.style.textAlign = 'right';
+//   checkeoTransparenText()
+// });
 
 // Color text and back
 colorP.addEventListener('input', ()=> {
