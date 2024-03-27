@@ -209,6 +209,7 @@ aside{
     align-items: center;
     padding: 10px 0px;
     background: #020c21;
+    border-bottom: 1px solid #1d3b49;
 }
 
 #input-image{
@@ -238,6 +239,13 @@ aside{
     background: #020c21;
     font-family: var(--secundary-font);
     padding: 10px 0px;
+    border-bottom: 1px solid #1d3b49;
+}
+
+.transparent-back{
+    display: flex;
+    align-items: center;
+    flex-direction: unset !important;
 }
 
 #fondos li, #color-text-list li{
@@ -319,6 +327,10 @@ form ul li {
     width: 39px;
     border-radius: 17px;
     transition-duration: 0.3s;
+}
+
+#contorno-p-none, #contorno-p-light, #contorno-p-dark{
+    transform: unset;
 }
 
 .fa-arrow-rotate-right:hover{
@@ -409,7 +421,12 @@ h3{
     align-items: center;
 }
 
-.text-none label{
+.transparent-back{
+    justify-content: unset !important;
+}
+
+.text-none label, 
+.transparent-back label{
     margin-right: 10px;
     color: #a29bfe;
 }

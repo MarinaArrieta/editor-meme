@@ -2,7 +2,11 @@
     width: 860px;
 }
 
-#list-image li, #text-list li {
+#list-image li, 
+#fondos li,
+#text-list li,
+#color-text-list li,
+#space-text-list li{
     width: 60%;
 }
 

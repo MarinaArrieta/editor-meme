@@ -115,23 +115,23 @@
                 </div>
                 <ul id="text-list" class="botones oculto">
                     <li>
-                        <label>SUPERIOR</label>
+                        <label id="label-top-text">SUPERIOR</label>
                         <input type="text" id="input-top-text">
-                        <div class="text-none">
-                            <label>Sin texto superior</label>
-                            <input type="checkbox" id="not-top-text"> 
-                        </div>
+                    </li>
+                    <li class="transparent-back">
+                        <label id="label-top-text-none">Sin texto superior</label>
+                        <input type="checkbox" id="not-top-text"> 
                     </li>
                     <li>
-                        <label>INFERIOR</label>
+                        <label id="label-bottom-text">INFERIOR</label>
                         <input type="text" id="input-bottom-text">
-                        <div class="text-none">
-                            <label>Sin texto inferior</label>
-                            <input type="checkbox" id="not-bottom-text"> 
-                        </div>
+                    </li>
+                    <li class="transparent-back">
+                        <label  id="label-bottom-text-none">Sin texto inferior</label>
+                        <input type="checkbox" id="not-bottom-text"> 
                     </li>
                     <li>
-                        <label>FUENTE</label>
+                        <label id="font-family">FUENTE</label>
                         <select id="font-family-p">
                             <option value="impact">Impact</option>
                             <option value="arial">Arial</option>
@@ -144,7 +144,7 @@
                             <option value="timesNewRoman">Times New Roman</option>
                         </select>
                     <li>
-                        <label>TAMAÑO</label>
+                        <label id="text-font-size">TAMAÑO</label>
                         <input type="number" min="30" max="60" value="30" id="font-size">
                     </li>
                     <li>
@@ -163,23 +163,23 @@
                 </ul>
                 <ul id="color-text-list" class="botones oculto">
                     <li>
-                        <label>COLOR</label>
+                        <label id="label-color">COLOR</label>
                         <input type="color" id="color-p" value="#58c5f9">
-                        <label id="hexa-color-p">#58c5f9</label>
+                        <label id="label-hexa-color-p">#58c5f9</label>
                     </li>
                     <li>
-                        <label>FONDO</label>
+                        <label id="label-background-text">FONDO</label>
                         <input type="color" id="color-back-p" value="#58c5f9">
-                        <label id="hexa-color-back">#58c5f9</label>
+                        <label id="label-hexa-color-back">#58c5f9</label>
                     </li>
-                    <li>
-                        <label>Fondo transparente</label>
+                    <li class="transparent-back">
+                        <label id="label-back-transparent-text">Fondo transparente</label>
                         <input type="checkbox" id="background-transparent"> 
                     </li>
                 </ul>
                 <ul id="space-text-list" class="botones oculto">
                     <li class="contorno">
-                        <label>CONTORNO</label>
+                        <label id="label-contorn">CONTORNO</label>
                         <div class="botons-directions-txt">
                             <button type="button" id="contorno-p-none">Ninguno</button>
                             <button type="button" id="contorno-p-light">Claro</button>
@@ -187,11 +187,11 @@
                         </div>
                     </li>
                     <li>
-                        <label>ESPACIADO</label>
+                        <label id="label-space">ESPACIADO</label>
                         <input type="number" min="10" max="30" value="10" id="padding-p">
                     </li>
                     <li>
-                        <label>INTERLINEADO</label>
+                        <label id="line-height-label">INTERLINEADO</label>
                         <select id="line-height-p">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
