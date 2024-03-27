@@ -158,8 +158,6 @@ buttonSpace.addEventListener('click', ()=> {
   spaceTextList.classList.toggle('oculto');
 });
 
-
-
 // Mood light and dark
 botonMood.addEventListener('click', () => {
     if (modo === 'claro'){
@@ -232,6 +230,7 @@ botonMood.addEventListener('click', () => {
         fondos.style.borderBottom = '1px solid #020c21';
         labelTopTexNone.style.color = '#58c5f9';
         labelBottomTextNone.style.color = '#58c5f9';
+        containerImg.style.backgroundSize = '100% 100%';
         botonText.style.color = ''
         modo = 'oscuro';
     } else {
@@ -303,6 +302,7 @@ botonMood.addEventListener('click', () => {
         fondos.style.borderBottom = '1px solid #d3b048';
         labelTopTexNone.style.color = '#9afb29';
         labelBottomTextNone.style.color = '#9afb29';
+        containerImg.style.backgroundSize = '100% 100%';
         modo = 'claro';
     }
 });
@@ -311,11 +311,6 @@ botonMood.addEventListener('click', () => {
 inputImageUrl.addEventListener('input', ()=> {
   containerImg.style.backgroundImage = `url("${inputImageUrl.value}")`;
 });
-
-// function imageLocal() {
-//   containerImg.style.backgroundImage = `url("${inputImage.value}")`;
-// }
-
 
 inputImage.addEventListener('change', ()=> {
   // const preview = containerImg;
