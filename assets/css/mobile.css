@@ -129,7 +129,7 @@ p{
     background: #58c5f9;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-blend-mode: difference;
+    /* background-blend-mode: difference; */
  }
 
 figure{

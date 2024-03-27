@@ -103,7 +103,7 @@ let paddingP = document.getElementById('padding-p');
 // line-height
 let lineHeightP = document.getElementById('line-height-p');
 
-// PRUEBA
+// Close and Open sections
 let imageButton = document.getElementById('image-button');
 let listImage = document.getElementById('list-image');
 let fondo = document.getElementById('fondo');
@@ -196,7 +196,6 @@ botonMood.addEventListener('click', () => {
         textList.style.backgroundColor = '#020c21';
         labelTopText.style.color = '#58c5f9';
         labelBottomText.style.color = '#58c5f9';
-        // labelTextNone.style.color = '#58c5f9';
         fontFamily.style.color = '#58c5f9';
         textFontSize.style.color = '#58c5f9';
         labelColor.style.color = '#58c5f9';
@@ -266,7 +265,6 @@ botonMood.addEventListener('click', () => {
         textList.style.backgroundColor = '#da67ed';
         labelTopText.style.color = '#020c21';
         labelBottomText.style.color = '#020c21';
-        // labelTextNone.style.color = '#020c21';
         fontFamily.style.color = '#020c21';
         textFontSize.style.color = '#020c21';
         labelColor.style.color = '#020c21';
@@ -297,9 +295,10 @@ inputImageUrl.addEventListener('input', ()=> {
 //   containerImg.style.backgroundImage = `url("${inputImage.value}")`;
 // }
 
-// inputImage.addEventListener('change', ()=> {
-//   imageLocal().readAsDataURL;
-// });
+inputImage.addEventListener('change', ()=> {
+  console.log("aca")
+  // imageLocal().readAsDataURL;
+});
 
 //Background Blend Mode
 color.addEventListener('input', ()=> {
@@ -391,7 +390,7 @@ buttonResetFilter.addEventListener('click', () =>{
   filterHue.value = 0;
   filterNegative.value = 0;
   filterSaturate.value = 100;
-  color.value = "#58c5f9";
+  color.value = "#FFFFFF";
   hexaColor.textContent = color.value;
   aplyFilter();
   aplyBlendMode();
@@ -517,7 +516,6 @@ colorP.addEventListener('input', ()=> {
 colorP.addEventListener('input', ()=> {
   console.log("aca")
   console.log(hexaColor.textContent)
-  // hexaColor.textContent = colorP.value;
   labelHexaColorP.textContent = colorP.value;
   topText.value = "#181b2c";
   topText.style.color = colorP.value;
@@ -526,7 +524,6 @@ colorP.addEventListener('input', ()=> {
 });
 
 colorBackP.addEventListener('input', ()=> {
-  // hexaColor.textContent = colorBackP.value;
   labelHexaColorBack.textContent = colorBackP.value;
   topText.value = "#181b2c";
   topText.style.backgroundColor = colorBackP.value;
@@ -604,4 +601,22 @@ paddingP.addEventListener('change', ()=> {
 lineHeightP.addEventListener('change', ()=> {
   topText.style.lineHeight = lineHeightP.value;
     bottomText.style.lineHeight = lineHeightP.value;
+});
+
+document.getElementById('button-download').addEventListener('click', function() {
+
+  container_meme = document.querySelector('.container-img-p');
+  config = {
+    quality: 0.95 // baja la calidad de imagen (1 es sin bajar la calidad)
+    // imagePlaceholder: img if the other fail
+  }
+
+  // https://github.com/tsayen/dom-to-image
+  domtoimage.toJpeg(container_meme, config).then(function (dataUrl) {
+    let link = document.createElement('a');
+    link.download = 'memeker.jpeg';
+    link.href = dataUrl;
+    link.click();
+  });
+
 });
