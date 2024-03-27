@@ -19,6 +19,12 @@ let labelSepia = document.getElementById('label-sepia');
 let labelHue = document.getElementById('label-hue');
 let labelSaturate = document.getElementById('label-saturate');
 let labelInvert = document.getElementById('label-invert');
+let buttonText = document.getElementById('button-text');
+let buttonColor = document.getElementById('button-color');
+let buttonSpace = document.getElementById('button-space');
+let textList = document.getElementById('text-list');
+let colorTextList = document.getElementById('color-text-list');
+let spaceTextList = document.getElementById('space-text-list');
 
 let icon = document.getElementById('icon');
 let modo = 'oscuro';
@@ -105,6 +111,15 @@ filtro.addEventListener('click', ()=> {
 
 botonText.addEventListener('click', ()=>{
   bottonsText.classList.toggle('oculto');
+});
+buttonText.addEventListener('click', ()=> {
+  textList.classList.toggle('oculto');
+});
+buttonColor.addEventListener('click', ()=> {
+  colorTextList.classList.toggle('oculto');
+});
+buttonSpace.addEventListener('click', ()=> {
+  spaceTextList.classList.toggle('oculto');
 });
 
 // Open and close window of image section

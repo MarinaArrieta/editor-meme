@@ -187,21 +187,21 @@ aside{
     border-bottom: 1px solid #1d3b49;
 }
 
-#image-button{
+#image-button, #button-text{
     padding: 5px;
     color: #9afb29;
     background: #212c33;;
     font-weight: normal;
 }
 
-#fondo{
+#fondo, #button-color{
     padding: 5px;
     color: #9afb29;
     background: #212c33;;
     font-weight: normal;
 }
 
-#filtro{
+#filtro, #button-space{
     padding: 5px;
     color: #9afb29;
     background: #212c33;;
