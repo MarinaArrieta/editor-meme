@@ -48,8 +48,8 @@
                 <ul id="fondos" class="botones oculto">
                     <li>
                         <label id="label-background">FONDO</label>
-                            <input type="color" id="color" value="#58c5f9">
-                            <p id="hexa-color">#58c5f9</p>
+                        <input type="color" id="color" value="#58c5f9">
+                        <label id="hexa-color">#58c5f9</label>
                     </li>
                     <li>
                         <label id="label-blend">BLEND MODE</label>
@@ -111,27 +111,27 @@
                 <div id="bottons-text" class="img oculto">
                     <button id="button-text">TEXTO</button>
                     <button id="button-color">COLOR</button>
-                    <button id="button-space">COSA</button>
+                    <button id="button-space">ESPACIADO</button>
                 </div>
                 <ul id="text-list" class="botones oculto">
                     <li>
-                        <h3>SUPERIOR</h3>
+                        <label>SUPERIOR</label>
                         <input type="text" id="input-top-text">
-                        <div>
-                            Sin texto superior
+                        <div class="text-none">
+                            <label>Sin texto superior</label>
                             <input type="checkbox" id="not-top-text"> 
                         </div>
                     </li>
                     <li>
-                        <h3>INFERIOR</h3>
+                        <label>INFERIOR</label>
                         <input type="text" id="input-bottom-text">
-                        <div>
-                            Sin texto inferior
+                        <div class="text-none">
+                            <label>Sin texto inferior</label>
                             <input type="checkbox" id="not-bottom-text"> 
                         </div>
                     </li>
                     <li>
-                        <h3>FUENTE</h3>
+                        <label>FUENTE</label>
                         <select id="font-family-p">
                             <option value="impact">Impact</option>
                             <option value="arial">Arial</option>
@@ -143,8 +143,12 @@
                             <option value="verdana">Verdana</option>
                             <option value="timesNewRoman">Times New Roman</option>
                         </select>
+                    <li>
+                        <label>TAMAÑO</label>
                         <input type="number" min="30" max="60" value="30" id="font-size">
-                        <div>
+                    </li>
+                    <li>
+                        <div class="botons-directions-txt">
                             <button type="button">
                                 <i class="fa-solid fa-align-left" id="text-align-left"></i>
                             </button>
@@ -157,39 +161,37 @@
                         </div>
                     </li>
                 </ul>
-                <u id="color-text-list" class="botones oculto">
+                <ul id="color-text-list" class="botones oculto">
                     <li>
-                        <div>
-                            <h3>COLOR</h3>
-                            <div class="container-p-hexa">
-                                <input type="color" id="color-p" value="#181b2c">
-                                <p id="hexa-color-p">#181b2c</p>
-                            </div>
-                            <h3>FONDO</h3>
-                            <div class="container-p-hexa">
-                                <input type="color" id="color-back-p" value="#181b2c">
-                                <p id="hexa-color-back">#181b2c</p>
-                            </div>
-                        </div>
-                        <div>
-                            Fondo transparente
-                            <input type="checkbox" id="background-transparent"> 
-                        </div>
+                        <label>COLOR</label>
+                        <input type="color" id="color-p" value="#58c5f9">
+                        <label id="hexa-color-p">#58c5f9</label>
                     </li>
-                </u>
+                    <li>
+                        <label>FONDO</label>
+                        <input type="color" id="color-back-p" value="#58c5f9">
+                        <label id="hexa-color-back">#58c5f9</label>
+                    </li>
+                    <li>
+                        <label>Fondo transparente</label>
+                        <input type="checkbox" id="background-transparent"> 
+                    </li>
+                </ul>
                 <ul id="space-text-list" class="botones oculto">
                     <li class="contorno">
-                        <h3>CONTORNO</h3>
-                        <button type="button" id="contorno-p-none">Ninguno</button>
-                        <button type="button" id="contorno-p-light">Claro</button>
-                        <button type="button" id="contorno-p-dark">Oscuro</button>
+                        <label>CONTORNO</label>
+                        <div class="botons-directions-txt">
+                            <button type="button" id="contorno-p-none">Ninguno</button>
+                            <button type="button" id="contorno-p-light">Claro</button>
+                            <button type="button" id="contorno-p-dark">Oscuro</button>
+                        </div>
                     </li>
                     <li>
-                        <h3>Espaciado</h3>
+                        <label>ESPACIADO</label>
                         <input type="number" min="10" max="30" value="10" id="padding-p">
                     </li>
                     <li>
-                        <h3>Interlineado</h3>
+                        <label>INTERLINEADO</label>
                         <select id="line-height-p">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
@@ -200,10 +202,7 @@
                         </select>
                     </li>
                 </ul>
-                <!-- </form> -->
             </section>
-
-
         </aside>
         <div class="container-meme">
             <div class="container-img-p">

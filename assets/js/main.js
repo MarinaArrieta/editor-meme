@@ -122,22 +122,7 @@ buttonSpace.addEventListener('click', ()=> {
   spaceTextList.classList.toggle('oculto');
 });
 
-// Open and close window of image section
-// botonImg.addEventListener('click', ()=>{
-//   sectionImagen.classList.toggle("oculto");
-// });
-// closeXImage.addEventListener('click', ()=>{
-//   sectionImagen.classList.toggle("oculto");
-// });
 
-// Open and close window of text section
-// botonText.addEventListener('click', ()=>{
-//   sectionTexto.classList.toggle("oculto");
-// });
-
-// closeXText.addEventListener('click', ()=>{
-//   sectionTexto.classList.toggle("oculto");
-// });
 
 // Mood light and dark
 botonMood.addEventListener('click', () => {
@@ -337,14 +322,6 @@ buttonResetFilter.addEventListener('click', () =>{
   filterHue.value = 0;
   filterNegative.value = 0;
   filterSaturate.value = 100;
-
-  // Blend Mode
-  // blendModeFilter.value = 'ninguno';
-  // blendModeFilter.value == 'aclarar'
-  // blendModeFilter.value == 'oscurecer'
-  // blendModeFilter.value == 'diferencia'
-  // blendModeFilter.value == 'luminucidad'
-  // blendModeFilter.value == 'multiplicar'
   color.value = "#58c5f9";
   hexaColor.textContent = color.value;
   aplyFilter();
@@ -362,7 +339,7 @@ notTopText.addEventListener('change', ()=> {
    containerImg.style.height =  '45vh';
  } else {
    topText.style.display = 'block';
-   containerImg.style.height =  '40vh';
+   containerImg.style.height =  '30vh';
 }
   checkeo();
   checkeoTransparenText();
@@ -378,7 +355,7 @@ notBottomText.addEventListener('change', ()=> {
    containerImg.style.height =  '45vh';
  } else {
    bottomText.style.display = 'block';
-   containerImg.style.height =  '40vh';
+   containerImg.style.height =  '30vh';
 }
   checkeo();
   checkeoTransparenText();
@@ -434,44 +411,32 @@ fontSize.addEventListener('change', ()=> {
 textAlignLeft.addEventListener('click', ()=> {
   topText.style.textAlign = `left`;
   bottomText.style.textAlign = `left`;
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
 textAlignLeft.addEventListener('click', ()=> {
   bottomText.style.textAlign = `left`;
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
-// textAlignLeft.addEventListener('click', ()=> {
-//   topText.style.textAlign = `left`;
-//   checkeoTransparenText()
-// });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   bottomText.style.textAlign = 'center';
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
-// textAlignCenter.addEventListener('click', ()=> {
-//   bottomText.style.textAlign = 'center';
-//   checkeoTransparenText()
-// });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
-  checkeoTransparenText()
+  // checkeoTransparenText()
 });
-// textAlignRight.addEventListener('click', ()=> {
-//   bottomText.style.textAlign = 'right';
-//   checkeoTransparenText()
-// });
 
 // Color text and back
 colorP.addEventListener('input', ()=> {
@@ -502,7 +467,9 @@ backgroundTransparent.addEventListener('change', ()=> {
 });
 
 function checkeoTransparent(){
-  if (backgroundTransparent.checked){
+  if (!backgroundTransparent.checked){
+    containerImg.style.height = '30vh';
+  }else if(backgroundTransparent.checked){
     topText.style.backgroundColor = 'transparent';
     topText.style.position = 'relative';
     topText.style.width = '100%';
@@ -525,7 +492,6 @@ function checkeoTransparent(){
 };
 
 function checkeoTransparenText(){
-  console.log("dentro de checkeoTransparenText")
   if(backgroundTransparent.checked && notTopText.checked){
     containerImg.style.height = '50vh';
   }else if(backgroundTransparent.checked && notTopText.checked){

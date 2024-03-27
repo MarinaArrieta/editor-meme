@@ -2,7 +2,7 @@
     width: 860px;
 }
 
-#list-image li {
+#list-image li, #text-list li {
     width: 60%;
 }
 
