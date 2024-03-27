@@ -112,27 +112,49 @@ let filtros = document.getElementById('filtros');
 
 botonImg.addEventListener('click', ()=> {
   bottons.classList.toggle('oculto');
-});
-imageButton.addEventListener('click', ()=> {
-  listImage.classList.toggle('oculto');
-});
-fondo.addEventListener('click', ()=> {
-  fondos.classList.toggle('oculto');
-});
-filtro.addEventListener('click', ()=> {
-  filtros.classList.toggle('oculto');
+  hiddenImage();
 });
 
 botonText.addEventListener('click', ()=>{
   bottonsText.classList.toggle('oculto');
+  hiddenText();
 });
+
+function hiddenImage(){
+  listImage.classList.add("oculto")
+  fondos.classList.add("oculto")
+  filtros.classList.add("oculto")
+};
+function hiddenText(){
+  textList.classList.add("oculto")
+  colorTextList.classList.add("oculto")
+  spaceTextList.classList.add("oculto")
+}
+
+
+imageButton.addEventListener('click', ()=> {
+  hiddenImage();
+  listImage.classList.toggle('oculto');
+});
+fondo.addEventListener('click', ()=> {
+  hiddenImage();
+  fondos.classList.toggle('oculto');
+});
+filtro.addEventListener('click', ()=> {
+  hiddenImage();
+  filtros.classList.toggle('oculto');
+});
+
 buttonText.addEventListener('click', ()=> {
+  hiddenText();
   textList.classList.toggle('oculto');
 });
 buttonColor.addEventListener('click', ()=> {
+  hiddenText();
   colorTextList.classList.toggle('oculto');
 });
 buttonSpace.addEventListener('click', ()=> {
+  hiddenText();
   spaceTextList.classList.toggle('oculto');
 });
 
