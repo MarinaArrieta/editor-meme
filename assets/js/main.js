@@ -650,3 +650,19 @@ document.getElementById('button-download').addEventListener('click', function() 
   });
 
 });
+
+// Para html2canvas
+// a.download = 'captured.png';
+// a.href = canvas.toDataURL('image/png');
+
+//DOWNLOAD BUTTON
+// const downloadMemeBtn = document.getElementById('download-meme-button');
+
+// downloadMemeBtn.addEventListener('click', () =>{
+//     html2canvas(document.getElementById('canvas-meme')).then( canvas=> {
+//         var a = document.createElement('a');
+//         a.download = 'captured.png';
+//         a.href = canvas.toDataURL('image/png');
+//         a.click();
+//     });
+// });
