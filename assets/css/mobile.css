@@ -191,15 +191,15 @@ aside{
     font-weight: normal;
 }
 
-#image-button:hover{
+#image-button:hover, #button-text:hover{
     transform: unset;
     transition-duration: unset;
 }
-#fondo:hover{
+#fondo:hover, #button-color:hover{
     transform: unset;
     transition-duration: unset;
 }
-#filtro:hover{
+#filtro:hover, #button-space:hover{
     transform: unset;
     transition-duration: unset;
 }
@@ -344,7 +344,7 @@ h3{
     block-size: 35px;
 }
 
-#color::-webkit-color-swatch {
+#color::-webkit-color-swatch{
     border: 0;
     border-radius: 30px;
 }
