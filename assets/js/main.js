@@ -637,7 +637,7 @@ document.getElementById('button-download').addEventListener('click', function() 
 
   container_meme = document.querySelector('.container-img-p');
   config = {
-    quality: 0.95 // baja la calidad de imagen (1 es sin bajar la calidad)
+    quality: 1 // baja la calidad de imagen (1 es sin bajar la calidad)
     // imagePlaceholder: img if the other fail
   }
 
