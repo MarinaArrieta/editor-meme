@@ -49,7 +49,6 @@ let colorPFooter = document.getElementById('color-p-footer');
 
 let bottonsText = document.getElementById('bottons-text');
 
-
 // Images: url, img desktop
 let inputImage = document.getElementById('input-image');
 let image = document.getElementById('image');
@@ -211,9 +210,9 @@ botonMood.addEventListener('click', () => {
         fondos.style.borderBottom = '1px solid #020c21';
         labelTopTexNone.style.color = '#58c5f9';
         labelBottomTextNone.style.color = '#58c5f9';
+        botonText.style.color = ''
         modo = 'oscuro';
     } else {
-        console.log("aca")
         document.querySelector("body").style.background = "radial-gradient(17% 23% at 75% 40%, #f3c47e 40%, rgb(188 243 123) 62%, rgba(76, 175, 80, 0) 129%), radial-gradient(17% 23% at 108% 51%, #ffe81bb8 40%, rgb(253 175 201 / 63%) 71%, rgba(76, 175, 80, 0) 121%), radial-gradient(22% 19% at -12% 27%, #E91E63 40%, rgb(209 249 162 / 108%) 73%, rgba(76, 175, 80, 0) 121%), radial-gradient(18% 28% at 18% 71%, rgb(243 129 168) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(251 234 184) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, #FF9800 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(248 206 255) 7%, rgb(0 188 212 / 0%) 100%), radial-gradient(18% 28% at 35% 87%, #ffea33 7%, rgb(20 163 231 / 56%) 100%), radial-gradient(31% 43% at 7% 98%, #FFEB3B 24%, rgb(240 163 253) 100%), radial-gradient(21% 37% at 72% 23%, rgb(211 255 109) 24%, rgb(30 174 243 / 97%) 100%), radial-gradient(35% 56% at 91% 74%, #CDDC39 9%, rgb(7 58 255) 100%), linear-gradient(125deg, rgb(21 237 28) 1%, rgb(125 21 143) 100%), radial-gradient(74% 86% at 67% 38%, rgb(118 240 255) 24%, rgb(72 174 223) 100%)";
         document.querySelector("body").style.backgroundAttachment = 'fixed';
         backHeader.style.backgroundColor = '#da67ed';
@@ -295,9 +294,24 @@ inputImageUrl.addEventListener('input', ()=> {
 //   containerImg.style.backgroundImage = `url("${inputImage.value}")`;
 // }
 
+
 inputImage.addEventListener('change', ()=> {
-  console.log("aca")
-  // imageLocal().readAsDataURL;
+  // const preview = containerImg;
+  const file = inputImage.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener(
+    "load",
+    function () {
+      // convierte la imagen a una cadena en base64
+      containerImg.style.backgroundImage = `url("${reader.result}")`;
+    },
+    false,
+  );
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 });
 
 //Background Blend Mode
@@ -405,7 +419,7 @@ notTopText.addEventListener('change', ()=> {
  if(notTopText.checked){
    topText.style.display = 'none';
    containerImg.style.height =  '45vh';
- } else {
+ } else if(!notTopText.checked){
    topText.style.display = 'block';
    containerImg.style.height =  '30vh';
 }
@@ -537,27 +551,29 @@ backgroundTransparent.addEventListener('change', ()=> {
 });
 
 function checkeoTransparent(){
-  if (!backgroundTransparent.checked){
-    containerImg.style.height = '30vh';
-  }else if(backgroundTransparent.checked){
+  if(backgroundTransparent.checked){
+    topText.style.color = '#020c21';
     topText.style.backgroundColor = 'transparent';
     topText.style.position = 'relative';
     topText.style.width = '100%';
     topText.style.zIndex = 1;
     topText.style.top = '55px';
+    bottomText.style.color = '#020c21';
     bottomText.style.backgroundColor = 'transparent';
     bottomText.style.position = 'relative';
     bottomText.style.width = '100%';
     bottomText.style.zIndex = 1;
-    bottomText.style.bottom = '55px';
+    bottomText.style.bottom = '119px';
     containerImg.style.position = 'relative';
     containerImg.style.zIndex = 0;
     containerImg.style.height = '50vh';
-  }else{
-    topText.style.position = 'unset';
-    bottomText.style.position = 'unset';
-    containerImg.style.position = 'unset';
-    topText.style.backgroundColor = 'none';
+  }else if(!backgroundTransparent.checked){
+    topText.style.top = '0px';
+    bottomText.style.bottom = '0px';
+  }
+  else if(!backgroundTransparent.checked && botonMood()){
+    topText.style.top = '0px';
+    bottomText.style.bottom = '0px';
   }
 };
 
@@ -567,14 +583,11 @@ function checkeoTransparenText(){
   }else if(backgroundTransparent.checked && notTopText.checked){
     containerImg.style.height = '50vh';
   }else if(backgroundTransparent.checked && notBottomText.checked==true){
-  console.log("aca zzzz c 1");
     containerImg.style.height = '50vh';
   } else if(backgroundTransparent.checked && notBottomText.checked==false){
     containerImg.style.height = '50vh';
   }else if(backgroundTransparent.checked==false){
-    containerImg.style.height = '40vh';
-    topText.style.backgroundColor = '#AE6BF2';
-    bottomText.style.backgroundColor = '#AE6BF2';
+    containerImg.style.height = '30vh';
   }
 };
 

@@ -431,6 +431,10 @@ h3{
     color: #a29bfe;
 }
 
+.button-direction{
+    padding: 4px;
+}
+
 footer{
     position: relative;
 }
