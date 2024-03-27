@@ -25,6 +25,10 @@ let modo = 'oscuro';
 let sectionImagen = document.getElementById('section-imagen');
 let sectionTexto = document.getElementById('section-texto');
 let colorPFooter = document.getElementById('color-p-footer');
+
+let bottonsText = document.getElementById('bottons-text');
+
+
 // Images: url, img desktop
 let inputImage = document.getElementById('input-image');
 let image = document.getElementById('image');
@@ -91,13 +95,16 @@ botonImg.addEventListener('click', ()=> {
 });
 imageButton.addEventListener('click', ()=> {
   listImage.classList.toggle('oculto');
-})
-
+});
 fondo.addEventListener('click', ()=> {
   fondos.classList.toggle('oculto');
 });
 filtro.addEventListener('click', ()=> {
   filtros.classList.toggle('oculto');
+});
+
+botonText.addEventListener('click', ()=>{
+  bottonsText.classList.toggle('oculto');
 });
 
 // Open and close window of image section

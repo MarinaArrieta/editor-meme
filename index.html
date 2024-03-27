@@ -31,93 +31,8 @@
         </nav>
     </header>
     <main id="back-main">
-        <!-- <div class="container-meme">
-            <div class="container-img-p">
-                <p id="top-text" class="top-text">TOP TEXT</p>
-                <div id="container-img" class="container-img">
-                </div>
-                <p id="bottom-text" class="bottom-text">BOTTOM TEXT</p>
-            </div>
-            <div class="button">
-                <button id="button-download">
-                    <i class="fa-solid fa-download"></i>
-                </button>
-            </div>
-        </div> -->
         <aside>
-            <!-- <section  id="section-imagen" class="img oculto">
-                <div class="close-x-image">
-                    <i class="fa-regular fa-circle-xmark" id="close-x-image"></i>
-                </div>
-                <h2>IMAGEN</h2>
-                <form>
-                    <ul>
-                        <li>
-                            <h3>URL</h3>
-                            <input type="url" id="input-image-url">
-                            <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
-                        </li>
-                        <li>
-                            <h3>FONDO</h3>
-                            <div class="container-p-hexa">
-                                <input type="color" id="color" value="#ffffff">
-                                <p id="hexa-color">#ffffff</p>
-                            </div>
-                            <select id="blendModeFilter">
-                                <option value="ninguno">Ninguno</option>
-                                <option value="aclarar">Aclarar</option>
-                                <option value="oscurecer">Oscurecer</option>
-                                <option value="diferencia">Diferencia</option>
-                                <option value="luminucidad">Luminucidad</option>
-                                <option value="multiplicar">Multiplicar</option>
-                            </select>
-                        </li>
-                        <li>
-                            <h3>FILTROS</h3>
-                            <label for="">BRILLO / BRIGHTNESS</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-brightness">
-                        </li>
-                        <li>
-                            <label for="">OPACIDAD</label>
-                            <input type="range" min="0" max="100" value="100" id="filter-opacity">
-                        </li>
-                        <li>
-                            <label for="">CONTRASTE</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-contrast">
-                        </li>
-                        <li>
-                            <label for="">DESENFOQUE / BLUR</label>
-                            <input type="range" min="0" max="100" value="0" id="filter-blur">
-                        </li>
-                        <li>
-                            <label for="">ESCALA DE GRISES</label>
-                            <input type="range" min="0" max="50" value="0" id="grayscale">
-                        </li>
-                        <li>
-                            <label>SEPIA</label>
-                            <input id="filter-sepia" type="range" min="0" max="100" value="0">
-                        </li>
-                        <li>
-                            <label for="">MATIZ / HUE</label>
-                            <input type="range" min="0" max="360" value="0" id="filter-hue">
-                        </li>
-                        <li>
-                            <label for="">SATURADO</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-saturate">
-                        </li>
-                        <li>
-                            <label for="">NEGATIVO</label>
-                            <input type="range"  min="0" max="100" value="0" id="filter-negative">
-                        </li>
-                        <li class="button-reset">
-                            <button type="button" id="button-reset-filter">
-                                <i class="fa-solid fa-arrow-rotate-right"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </form>
-            </section> -->
-            <section  id="section-imagen">
+            <section>
                 <div id="bottons" class="img oculto">
                     <button id="image-button">IMAGEN</button>
                     <button id="fondo">FONDO</button>
@@ -125,7 +40,6 @@
                 </div>
                 <ul id="list-image" class="botones oculto">
                     <li>
-                        <!-- <label>IMAGEN</label> -->
                         <label id="label-url">URL</label>
                         <input type="url" placeholder="Ingrese url..." id="input-image-url">
                         <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" value="">
@@ -193,7 +107,7 @@
                         </li>
                     </ul>
             </section>
-            <section id="section-texto" class="texto oculto">
+            <!-- <section id="section-texto" class="texto oculto">
                 <div class="close-text" id="close-x-text">
                     <i class="fa-regular fa-circle-xmark" id="close-x-text"></i>
                 </div>
@@ -283,7 +197,104 @@
                         </li>
                     </ul>
                 </form>
+            </section> -->
+            <section id="section-texto" class="texto oculto">
+                <div id="bottons-text" class="img oculto">
+                    <button id="button-text">TEXTO</button>
+                    <button id="button-color">COLOR</button>
+                    <button id="button-space">COSA</button>
+                </div>
+                <ul>
+                    <li>
+                        <h3>SUPERIOR</h3>
+                        <input type="text" id="input-top-text">
+                        <div>
+                            Sin texto superior
+                            <input type="checkbox" id="not-top-text"> 
+                        </div>
+                    </li>
+                    <li>
+                        <h3>INFERIOR</h3>
+                        <input type="text" id="input-bottom-text">
+                        <div>
+                            Sin texto inferior
+                            <input type="checkbox" id="not-bottom-text"> 
+                        </div>
+                    </li>
+                    <li>
+                        <h3>FUENTE</h3>
+                        <select id="font-family-p">
+                            <option value="impact">Impact</option>
+                            <option value="arial">Arial</option>
+                            <option value="arialBlack">Arial Black</option>
+                            <option value="americanTypewriter">American Typewriter</option>
+                            <option value="andaleMono">Andale Mono</option>
+                            <option value="comicSans">Comic Sans MS</option>
+                            <option value="helvetica">Helvetica</option>
+                            <option value="verdana">Verdana</option>
+                            <option value="timesNewRoman">Times New Roman</option>
+                        </select>
+                        <input type="number" min="30" max="60" value="30" id="font-size">
+                        <div>
+                            <button type="button">
+                                <i class="fa-solid fa-align-left" id="text-align-left"></i>
+                            </button>
+                            <button type="button">
+                                <i class="fa-solid fa-align-center" id="text-align-center"></i>
+                            </button>
+                            <button type="button">
+                                <i class="fa-solid fa-align-right" id="text-align-right"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <u>
+                    <li>
+                        <div>
+                            <h3>COLOR</h3>
+                            <div class="container-p-hexa">
+                                <input type="color" id="color-p" value="#181b2c">
+                                <p id="hexa-color-p">#181b2c</p>
+                            </div>
+                            <h3>FONDO</h3>
+                            <div class="container-p-hexa">
+                                <input type="color" id="color-back-p" value="#181b2c">
+                                <p id="hexa-color-back">#181b2c</p>
+                            </div>
+                        </div>
+                        <div>
+                            Fondo transparente
+                            <input type="checkbox" id="background-transparent"> 
+                        </div>
+                    </li>
+                </u>
+                <ul>
+                    <li class="contorno">
+                        <h3>CONTORNO</h3>
+                        <button type="button" id="contorno-p-none">Ninguno</button>
+                        <button type="button" id="contorno-p-light">Claro</button>
+                        <button type="button" id="contorno-p-dark">Oscuro</button>
+                    </li>
+                    <li>
+                        <h3>Espaciado</h3>
+                        <input type="number" min="10" max="30" value="10" id="padding-p">
+                    </li>
+                    <li>
+                        <h3>Interlineado</h3>
+                        <select id="line-height-p">
+                            <option value="0.8">0.8</option>
+                            <option value="1">1</option>
+                            <option value="1.2">1.2</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                        </select>
+                    </li>
+                </ul>
+                <!-- </form> -->
             </section>
+
+
         </aside>
         <div class="container-meme">
             <div class="container-img-p">
