@@ -90,9 +90,9 @@ p{
     font-family: var(--secundary-font);
     background: var(--white);
     text-align: center;
-    color: #58c5f9;
+    color: #020c21;
     padding: 5px;
-    background: #020c21;
+    background: #3f51b5;
 }
 
 #hexa-color{
@@ -129,18 +129,6 @@ p{
     background: #58c5f9;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* background-blend-mode: difference; */
- }
-
-figure{
-    width: 100%;
-     height: 26vh;
-    overflow: hidden;
-}
-
-img{
-    width: 100%;
-    height: 26vh;
 }
 
 .button{
@@ -163,7 +151,7 @@ aside{
     width: 100%;
     font-family: var(--secundary-font);
     background: #020c21;
-    display: flex; 
+    display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
@@ -319,7 +307,7 @@ form ul li {
 }
 
 #button-reset-filter{
-    width: 70px;
+    width: 35px;
 }
 
 #button-reset-filter:hover{
@@ -441,7 +429,7 @@ footer{
 
 footer p{
     position: absolute;
-    bottom: -180px;
+    bottom: -149px;
     width: 100%;
     background: transparent;
     color: #58c5f9;

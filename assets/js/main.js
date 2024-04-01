@@ -6,7 +6,7 @@ let closeXImage = document.getElementById('close-x-image');
 let botonText = document.getElementById('boton-text');
 let closeXText = document.getElementById('close-x-text');
 let buttonDownload = document.getElementById('button-download');
-let bottons = document.getElementById('bottons');
+let buttonsImg = document.getElementById('buttons-img');
 let labelUrl = document.getElementById('label-url');
 let labelBackground = document.getElementById('label-background');
 let labelBlend = document.getElementById('label-blend');
@@ -40,15 +40,12 @@ let labelHexaColorBack = document.getElementById('label-hexa-color-back');
 let labelHexaColorP = document.getElementById('label-hexa-color-p');
 let labelTopTexNone = document.getElementById('label-top-text-none');
 let labelBottomTextNone = document.getElementById('label-bottom-text-none');
-
 let icon = document.getElementById('icon');
 let modo = 'oscuro';
 let sectionImagen = document.getElementById('section-imagen');
 let sectionTexto = document.getElementById('section-texto');
 let colorPFooter = document.getElementById('color-p-footer');
-
 let bottonsText = document.getElementById('bottons-text');
-
 // Images: url, img desktop
 let inputImage = document.getElementById('input-image');
 let image = document.getElementById('image');
@@ -101,7 +98,6 @@ let contornoPDark = document.getElementById('contorno-p-dark');
 let paddingP = document.getElementById('padding-p');
 // line-height
 let lineHeightP = document.getElementById('line-height-p');
-
 // Close and Open sections
 let imageButton = document.getElementById('image-button');
 let listImage = document.getElementById('list-image');
@@ -111,7 +107,7 @@ let filtro = document.getElementById('filtro');
 let filtros = document.getElementById('filtros');
 
 botonImg.addEventListener('click', ()=> {
-  bottons.classList.toggle('oculto');
+  buttonsImg.classList.toggle('oculto');
   hiddenImage();
 });
 
@@ -121,16 +117,17 @@ botonText.addEventListener('click', ()=>{
 });
 
 function hiddenImage(){
-  listImage.classList.add("oculto")
-  fondos.classList.add("oculto")
-  filtros.classList.add("oculto")
+  listImage.classList.add("oculto");
+  fondos.classList.add("oculto");
+  filtros.classList.add("oculto");
 };
-function hiddenText(){
-  textList.classList.add("oculto")
-  colorTextList.classList.add("oculto")
-  spaceTextList.classList.add("oculto")
-}
 
+function hiddenText(){
+  textList.classList.add("oculto");
+  colorTextList.classList.add("oculto");
+  spaceTextList.classList.add("oculto");
+  
+};
 
 imageButton.addEventListener('click', ()=> {
   hiddenImage();
@@ -181,14 +178,14 @@ botonMood.addEventListener('click', () => {
         textList.style.borderBottom = '1px solid #1d3b49';
         colorTextList.style.borderBottom = '1px solid #1d3b49';
         spaceTextList.style.borderBottom = '1px solid #1d3b49';
-        topText.style.background = '#020c21';
-        bottomText.style.background = '#020c21';
-        topText.style.color = '#58c5f9';
-        bottomText.style.color = '#58c5f9';
+        // topText.style.background = '#020c21';
+        // bottomText.style.background = '#020c21';
+        // topText.style.color = '#58c5f9';
+        // bottomText.style.color = '#58c5f9';
         colorPFooter.style.color = '#58c5f9';
-        containerImg.style.background = '#58c5f9';
-        bottons.style.background = '#020c21';
-        bottons.style.borderBottom = '1px solid #1d3b49';
+        // containerImg.style.background = '#58c5f9';
+        buttonsImg.style.background = '#020c21';
+        buttonsImg.style.borderBottom = '1px solid #1d3b49';
         listImage.style.background = '#020c21';
         fondos.style.background = '#020c21';
         filtros.style.background = '#020c21';
@@ -231,19 +228,19 @@ botonMood.addEventListener('click', () => {
         labelTopTexNone.style.color = '#58c5f9';
         labelBottomTextNone.style.color = '#58c5f9';
         containerImg.style.backgroundSize = '100% 100%';
-        botonText.style.color = ''
+        // botonText.style.color = ''
         modo = 'oscuro';
     } else {
         document.querySelector("body").style.background = "radial-gradient(17% 23% at 75% 40%, #f3c47e 40%, rgb(188 243 123) 62%, rgba(76, 175, 80, 0) 129%), radial-gradient(17% 23% at 108% 51%, #ffe81bb8 40%, rgb(253 175 201 / 63%) 71%, rgba(76, 175, 80, 0) 121%), radial-gradient(22% 19% at -12% 27%, #E91E63 40%, rgb(209 249 162 / 108%) 73%, rgba(76, 175, 80, 0) 121%), radial-gradient(18% 28% at 18% 71%, rgb(243 129 168) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(251 234 184) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, #FF9800 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(248 206 255) 7%, rgb(0 188 212 / 0%) 100%), radial-gradient(18% 28% at 35% 87%, #ffea33 7%, rgb(20 163 231 / 56%) 100%), radial-gradient(31% 43% at 7% 98%, #FFEB3B 24%, rgb(240 163 253) 100%), radial-gradient(21% 37% at 72% 23%, rgb(211 255 109) 24%, rgb(30 174 243 / 97%) 100%), radial-gradient(35% 56% at 91% 74%, #CDDC39 9%, rgb(7 58 255) 100%), linear-gradient(125deg, rgb(21 237 28) 1%, rgb(125 21 143) 100%), radial-gradient(74% 86% at 67% 38%, rgb(118 240 255) 24%, rgb(72 174 223) 100%)";
         document.querySelector("body").style.backgroundAttachment = 'fixed';
         backHeader.style.backgroundColor = '#da67ed';
-        topText.style.backgroundColor = '#da67ed';
-        bottomText.style.background = '#da67ed';
-        topText.style.color = '#020c21';
-        bottomText.style.color = '#020c21';
+        // topText.style.backgroundColor = '#da67ed';
+        // bottomText.style.background = '#da67ed';
+        // topText.style.color = '#020c21';
+        // bottomText.style.color = '#020c21';
         colorPFooter.style.color = '#020c21';
         document.querySelector("h1").style.color = '#020c21';
-        containerImg.style.background = '#FFEB3B';
+        // containerImg.style.background = '#FFEB3B';
         backHeader.style.borderBottom = '1px solid #d3b048';
         bottonsText.style.borderBottom = '1px solid #d3b048';
         boton.style.color = '#9afb29';
@@ -255,8 +252,8 @@ botonMood.addEventListener('click', () => {
         buttonDownload.style.backgroundColor = '#6006ff';
         buttonDownload.style.color = '#9afb29';
         icon.className = 'fa-solid fa-moon';
-        bottons.style.background = '#da67ed';
-        bottons.style.borderBottom = '1px solid #d3b048';
+        buttonsImg.style.background = '#da67ed';
+        buttonsImg.style.borderBottom = '1px solid #d3b048';
         listImage.style.background = '#da67ed';
         fondos.style.background = '#da67ed';
         filtros.style.background = '#da67ed';
@@ -313,7 +310,6 @@ inputImageUrl.addEventListener('input', ()=> {
 });
 
 inputImage.addEventListener('change', ()=> {
-  // const preview = containerImg;
   const file = inputImage.files[0];
   const reader = new FileReader();
 
@@ -334,15 +330,15 @@ inputImage.addEventListener('change', ()=> {
 //Background Blend Mode
 color.addEventListener('input', ()=> {
   hexaColor.textContent = color.value;
-  aplyBlendMode();
+  applyBlendMode();
 });
 
 blendModeFilter.addEventListener('change', ()=> {
   
-  containerImg.style.backgroundImage =  aplyBlendMode();
+  containerImg.style.backgroundImage =  applyBlendMode();
 });
 
-function aplyBlendMode() {
+function applyBlendMode() {
   if (blendModeFilter.value == 'ninguno'){
     containerImg.style.backgroundBlendMode = 'normal';
   } else if (blendModeFilter.value == 'aclarar'){
@@ -362,42 +358,42 @@ function aplyBlendMode() {
 
 // Event filters
 filterBrightness.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterOpacity.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterContrast.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterBlur.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 grayscale.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterSepia.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterHue.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterSaturate.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
 filterNegative.addEventListener('input', ()=> {
-  aplyFilter();
+  applyFilter();
 });
 
-function aplyFilter() {
+function applyFilter() {
   filterAll = ` brightness(${filterBrightness.value}%)`;
   filterAll += ` opacity(${filterOpacity.value}%)`;
   filterAll += ` contrast(${filterContrast.value}%)`;
@@ -484,9 +480,9 @@ function fontFamilyChange(){
   } else if (fontFamilyP.value == 'americanTypewriter'){
     bottomText.style.fontFamily = 'American Typewriter';
     topText.style.fontFamily = 'American Typewriter';
-  } else if (fontFamilyP.value == 'andaleMono'){
-    bottomText.style.fontFamily = 'andale mono';
-    topText.style.fontFamily = 'andale mono';
+  } else if (fontFamilyP.value == 'madimiOne'){
+    bottomText.style.fontFamily = 'Madimi One';
+    topText.style.fontFamily = 'Madimi One';
   } else if (fontFamilyP.value == 'comicSans'){
     bottomText.style.fontFamily = 'Comic Sans MS';
     topText.style.fontFamily = 'Comic Sans MS';
@@ -510,31 +506,25 @@ fontSize.addEventListener('change', ()=> {
 textAlignLeft.addEventListener('click', ()=> {
   topText.style.textAlign = `left`;
   bottomText.style.textAlign = `left`;
-  // checkeoTransparenText()
 });
 textAlignLeft.addEventListener('click', ()=> {
   bottomText.style.textAlign = `left`;
-  // checkeoTransparenText()
 });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   bottomText.style.textAlign = 'center';
-  // checkeoTransparenText()
 });
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
-  // checkeoTransparenText()
 });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
-  // checkeoTransparenText()
 });
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
-  // checkeoTransparenText()
 });
 
 // Color text and back
@@ -666,3 +656,11 @@ document.getElementById('button-download').addEventListener('click', function() 
 //         a.click();
 //     });
 // });
+
+
+
+// Letra andale mono
+// if (menuFuente.value === 'andalemono'){
+//   textoSuperiorH2.style.fontFamily = "'Andale Mono', monospace";
+//   textoInferiorH2.style.fontFamily = "'Andale Mono', monospace";
+// }
