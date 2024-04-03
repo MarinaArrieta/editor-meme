@@ -34,11 +34,9 @@ nav{
     margin-bottom: 15px;
 }
 
-ul{
-    list-style: none;
-    padding: 0;
+nav ul{
     display: flex;
-    gap: 10px;
+    flex-direction: unset;
 }
 
 button{
@@ -65,7 +63,6 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-size: 20px 20px;
 }
 
 .container-meme{
@@ -151,7 +148,7 @@ aside{
     background: var(--dark-blue);
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     padding: 15px;
     border-bottom: 1px solid var(--dark-green-middle);
 }
@@ -192,7 +189,6 @@ aside{
 
 #list-image, #text-list, #space-text-list{
     width: 100%;
-    flex-direction: column;
     align-items: center;
     padding: 10px 0px;
     background: var(--dark-blue);
@@ -220,8 +216,7 @@ aside{
 
 #fondos, #color-text-list{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: center; 
     width: 100%;
     background: var(--dark-blue);
     font-family: var(--secundary-font);
@@ -243,10 +238,7 @@ aside{
 }
 
 #filtros{
-    display: flex;
-    flex-direction: column;
     flex-flow: wrap;
-    justify-content: space-around;
     width: 100%;
     height: 40vh;
     background: var(--dark-blue);
@@ -281,19 +273,13 @@ h2{
     text-align: center;
 }
 
-form{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-form ul{
+ul{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 90%;
+    list-style: none;
+    gap: 10px;
 }
 
 form ul li {
@@ -431,7 +417,8 @@ footer p{
     bottom: -115px;
     width: 100%;
     background: transparent;
-    color: var(--light-blue);
+    color: var(--light-green);
     font-family: var(--secundary-font);
+    background-image: linear-gradient(to right, transparent 35%, #4000b5 46%, #3F51B5 54%, transparent 65%);
     letter-spacing: 2px;
 }

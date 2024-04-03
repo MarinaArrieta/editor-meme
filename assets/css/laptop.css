@@ -17,3 +17,7 @@
 #filtros li {
     width: 33%;
 }
+
+footer p{
+    background-image: linear-gradient(to right, transparent 45%, #4000b5 48%, #3F51B5 53%, transparent 56%);
+}
