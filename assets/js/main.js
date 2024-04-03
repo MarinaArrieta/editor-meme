@@ -158,99 +158,21 @@ buttonSpace.addEventListener('click', ()=> {
 // Mood light and dark
 botonMood.addEventListener('click', () => {
     if (modo === 'claro'){
-        backHeader.style.backgroundColor = '#140e21';
-        document.querySelector("h1").style.color = '#58c5f9';
-        boton.style.color = 'var(--blue)';
-        boton.style.backgroundColor = '#9afb29';
-        botonImg.style.color = 'var(--blue)';
-        botonImg.style.backgroundColor = '#9afb29';
-        botonText.style.color = 'var(--blue)';
-        botonText.style.backgroundColor = '#9afb29';
-        botonText.style.color = 'var(--blue)';
-        buttonDownload.style.backgroundColor = '#9afb29';
-        buttonDownload.style.color = 'var(--blue)';
-        icon.className = 'fa-solid fa-sun';
-        document.querySelector("body").style.background = "radial-gradient(22% 16% at -11% 18%, rgb(0, 11, 75) 42%, rgba(0, 40, 57, 0.82) 75%, rgba(76, 175, 80, 0) 121%) fixed, radial-gradient(18% 28% at 18% 71%, rgb(10, 20, 69) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(0, 0, 0) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, rgb(2, 7, 35) 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(18, 43, 187) 7%, rgba(1, 41, 37, 0.4) 100%), radial-gradient(18% 28% at 35% 87%, rgb(23, 124, 209) 7%, rgba(0, 48, 71, 0.39) 100%), radial-gradient(31% 43% at 7% 98%, rgb(7, 19, 85) 24%, rgba(2, 43, 49, 0.35) 100%), radial-gradient(21% 37% at 72% 23%, rgba(211, 255, 109, 0.89) 24%, rgba(96, 125, 139, 0.13) 100%), radial-gradient(35% 56% at 91% 74%, rgba(24, 4, 63, 0.96) 9%, rgba(7, 58, 255, 0) 100%), radial-gradient(74% 86% at 67% 38%, rgb(3, 88, 99) 24%, rgb(96, 125, 139) 100%), linear-gradient(125deg, rgb(13, 151, 18) 1%, rgb(76, 175, 80) 100%)";
-        document.querySelector("body").style.backgroundAttachment = 'fixed';
-        backHeader.style.borderBottom = '1px solid #1d3b49';
-        bottonsText.style.borderBottom = '1px solid #1d3b49';
-        listImage.style.borderBottom = '1px solid #1d3b49';
-        textList.style.borderBottom = '1px solid #1d3b49';
-        colorTextList.style.borderBottom = '1px solid #1d3b49';
-        spaceTextList.style.borderBottom = '1px solid #1d3b49';
-        // topText.style.background = '#020c21';
-        // bottomText.style.background = '#020c21';
-        // topText.style.color = '#58c5f9';
-        // bottomText.style.color = '#58c5f9';
-        colorPFooter.style.color = '#58c5f9';
-        // containerImg.style.background = '#58c5f9';
-        buttonsImg.style.background = '#020c21';
-        buttonsImg.style.borderBottom = '1px solid #1d3b49';
-        listImage.style.background = '#020c21';
-        fondos.style.background = '#020c21';
-        filtros.style.background = '#020c21';
-        imageButton.style.background = '#212c33';
-        fondo.style.background = '#212c33';
-        filtro.style.background = '#212c33';
-        labelUrl.style.color = '#58c5f9';
-        labelBackground.style.color = '#58c5f9';
-        labelBlend.style.color = '#58c5f9';
-        labelBrightness.style.color = '#58c5f9';
-        labelOpacity.style.color = '#58c5f9';
-        labelContrast.style.color = '#58c5f9';
-        labelBlur.style.color = '#58c5f9';
-        labelGrayscale.style.color = '#58c5f9';
-        labelSepia.style.color = '#58c5f9';
-        labelHue.style.color = '#58c5f9';
-        labelSaturate.style.color = '#58c5f9';
-        labelInvert.style.color = '#58c5f9';
-        hexaColor.style.color = '#58c5f9';
-        bottonsText.style.backgroundColor = '#020c21';
-        buttonText.style.backgroundColor = '#212c33';
-        buttonColor.style.backgroundColor = '#212c33';
-        buttonSpace.style.backgroundColor = '#212c33';
-        textList.style.backgroundColor = '#020c21';
-        labelTopText.style.color = '#58c5f9';
-        labelBottomText.style.color = '#58c5f9';
-        fontFamily.style.color = '#58c5f9';
-        textFontSize.style.color = '#58c5f9';
-        labelColor.style.color = '#58c5f9';
-        labelBackgroundText.style.color = '#58c5f9';
-        labelBackTransparentText.style.color = '#58c5f9';
-        labelSpace.style.color = '#58c5f9';
-        lineHeightLabel.style.color = '#58c5f9';
-        labelContorn.style.color = '#58c5f9';
-        labelHexaColorBack.style.color = '#58c5f9';
-        labelHexaColorP.style.color = '#58c5f9';
-        colorTextList.style.backgroundColor = '#020c21';
-        spaceTextList.style.backgroundColor = '#020c21';
-        fondos.style.borderBottom = '1px solid #020c21';
-        labelTopTexNone.style.color = '#58c5f9';
-        labelBottomTextNone.style.color = '#58c5f9';
-        containerImg.style.backgroundSize = '100% 100%';
-        // botonText.style.color = ''
-        modo = 'oscuro';
-    } else {
-        document.querySelector("body").style.background = "radial-gradient(17% 23% at 75% 40%, #f3c47e 40%, rgb(188 243 123) 62%, rgba(76, 175, 80, 0) 129%), radial-gradient(17% 23% at 108% 51%, #ffe81bb8 40%, rgb(253 175 201 / 63%) 71%, rgba(76, 175, 80, 0) 121%), radial-gradient(22% 19% at -12% 27%, #E91E63 40%, rgb(209 249 162 / 108%) 73%, rgba(76, 175, 80, 0) 121%), radial-gradient(18% 28% at 18% 71%, rgb(243 129 168) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(251 234 184) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, #FF9800 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(248 206 255) 7%, rgb(0 188 212 / 0%) 100%), radial-gradient(18% 28% at 35% 87%, #ffea33 7%, rgb(20 163 231 / 56%) 100%), radial-gradient(31% 43% at 7% 98%, #FFEB3B 24%, rgb(240 163 253) 100%), radial-gradient(21% 37% at 72% 23%, rgb(211 255 109) 24%, rgb(30 174 243 / 97%) 100%), radial-gradient(35% 56% at 91% 74%, #CDDC39 9%, rgb(7 58 255) 100%), linear-gradient(125deg, rgb(21 237 28) 1%, rgb(125 21 143) 100%), radial-gradient(74% 86% at 67% 38%, rgb(118 240 255) 24%, rgb(72 174 223) 100%)";
+        document.querySelector("body").style.background = "var(--light-gradient)";
         document.querySelector("body").style.backgroundAttachment = 'fixed';
         backHeader.style.backgroundColor = '#da67ed';
-        // topText.style.backgroundColor = '#da67ed';
-        // bottomText.style.background = '#da67ed';
-        // topText.style.color = '#020c21';
-        // bottomText.style.color = '#020c21';
-        colorPFooter.style.color = '#020c21';
-        document.querySelector("h1").style.color = '#020c21';
-        // containerImg.style.background = '#FFEB3B';
+        colorPFooter.style.color = 'var(--dark-blue)';
+        document.querySelector("h1").style.color = 'var(--dark-blue)';
         backHeader.style.borderBottom = '1px solid #d3b048';
         bottonsText.style.borderBottom = '1px solid #d3b048';
-        boton.style.color = '#9afb29';
+        boton.style.color = 'var(--light-green)';
         boton.style.backgroundColor = '#6006ff';
-        botonImg.style.color = '#9afb29';
+        botonImg.style.color = 'var(--light-green)';
         botonImg.style.backgroundColor = '#6006ff';
-        botonText.style.color = '#9afb29';
+        botonText.style.color = 'var(--light-green)';
         botonText.style.backgroundColor = '#6006ff';
         buttonDownload.style.backgroundColor = '#6006ff';
-        buttonDownload.style.color = '#9afb29';
+        buttonDownload.style.color = 'var(--light-green)';
         icon.className = 'fa-solid fa-moon';
         buttonsImg.style.background = '#da67ed';
         buttonsImg.style.borderBottom = '1px solid #d3b048';
@@ -260,19 +182,19 @@ botonMood.addEventListener('click', () => {
         imageButton.style.background = '#6006ff';
         fondo.style.background = '#6006ff';
         filtro.style.background = '#6006ff';
-        labelUrl.style.color = '#020c21';
-        labelBackground.style.color = '#020c21';
-        labelBlend.style.color = '#020c21';
-        labelBrightness.style.color = '#020c21';
-        labelOpacity.style.color = '#020c21';
-        labelContrast.style.color = '#020c21';
-        labelBlur.style.color = '#020c21';
-        labelGrayscale.style.color = '#020c21';
-        labelSepia.style.color = '#020c21';
-        labelHue.style.color = '#020c21';
-        labelSaturate.style.color = '#020c21';
-        labelInvert.style.color = '#020c21';
-        hexaColor.style.color = '#020c21';
+        labelUrl.style.color = 'var(--dark-blue)';
+        labelBackground.style.color = 'var(--dark-blue)';
+        labelBlend.style.color = 'var(--dark-blue)';
+        labelBrightness.style.color = 'var(--dark-blue)';
+        labelOpacity.style.color = 'var(--dark-blue)';
+        labelContrast.style.color = 'var(--dark-blue)';
+        labelBlur.style.color = 'var(--dark-blue)';
+        labelGrayscale.style.color = 'var(--dark-blue)';
+        labelSepia.style.color = 'var(--dark-blue)';
+        labelHue.style.color = 'var(--dark-blue)';
+        labelSaturate.style.color = 'var(--dark-blue)';
+        labelInvert.style.color = 'var(--dark-blue)';
+        hexaColor.style.color = 'var(--dark-blue)';
         listImage.style.borderBottom = '1px solid #d3b048';
         textList.style.borderBottom = '1px solid #d3b048';
         bottonsText.style.backgroundColor = '#da67ed';
@@ -280,27 +202,94 @@ botonMood.addEventListener('click', () => {
         buttonColor.style.backgroundColor = '#6006ff';
         buttonSpace.style.backgroundColor = '#6006ff';
         textList.style.backgroundColor = '#da67ed';
-        labelTopText.style.color = '#020c21';
-        labelBottomText.style.color = '#020c21';
-        fontFamily.style.color = '#020c21';
-        textFontSize.style.color = '#020c21';
-        labelColor.style.color = '#020c21';
-        labelBackgroundText.style.color = '#020c21';
-        labelBackTransparentText.style.color = '#9afb29';
-        labelSpace.style.color = '#020c21';
-        lineHeightLabel.style.color = '#020c21';
-        labelContorn.style.color = '#020c21';
-        labelHexaColorBack.style.color = '#020c21';
-        labelHexaColorP.style.color = '#020c21';
+        labelTopText.style.color = 'var(--dark-blue)';
+        labelBottomText.style.color = 'var(--dark-blue)';
+        fontFamily.style.color = 'var(--dark-blue)';
+        textFontSize.style.color = 'var(--dark-blue)';
+        labelColor.style.color = 'var(--dark-blue)';
+        labelBackgroundText.style.color = 'var(--dark-blue)';
+        labelBackTransparentText.style.color = 'var(--light-green)';
+        labelSpace.style.color = 'var(--dark-blue)';
+        lineHeightLabel.style.color = 'var(--dark-blue)';
+        labelContorn.style.color = 'var(--dark-blue)';
+        labelHexaColorBack.style.color = 'var(--dark-blue)';
+        labelHexaColorP.style.color = 'var(--dark-blue)';
         colorTextList.style.backgroundColor = '#da67ed';
         spaceTextList.style.backgroundColor = '#da67ed';
         colorTextList.style.borderBottom = '1px solid #d3b048';
         spaceTextList.style.borderBottom = '1px solid #d3b048';
         fondos.style.borderBottom = '1px solid #d3b048';
-        labelTopTexNone.style.color = '#9afb29';
-        labelBottomTextNone.style.color = '#9afb29';
+        labelTopTexNone.style.color = 'var(--light-green)';
+        labelBottomTextNone.style.color = 'var(--light-green)';
         containerImg.style.backgroundSize = '100% 100%';
-        modo = 'claro';
+        modo = 'oscuro';
+    } else {
+      document.querySelector("body").style.background = 'var(--gradient-dark)';
+      document.querySelector("body").style.backgroundAttachment = 'fixed';
+      backHeader.style.backgroundColor = 'var(--dark-blue)';
+      document.querySelector("h1").style.color = 'var(--light-blue)';
+      boton.style.color = 'var(--blue)';
+      boton.style.backgroundColor = 'var(--light-green)';
+      botonImg.style.color = 'var(--blue)';
+      botonImg.style.backgroundColor = 'var(--light-green)';
+      botonText.style.color = 'var(--blue)';
+      botonText.style.backgroundColor = 'var(--light-green)';
+      botonText.style.color = 'var(--blue)';
+      buttonDownload.style.backgroundColor = 'var(--light-green)';
+      buttonDownload.style.color = 'var(--blue)';
+      icon.className = 'fa-solid fa-sun';
+      backHeader.style.borderBottom = '1px solid var(--dark-green-middle)';
+      bottonsText.style.borderBottom = '1px solid var(--dark-green-middle)';
+      listImage.style.borderBottom = '1px solid var(--dark-green-middle)';
+      textList.style.borderBottom = '1px solid var(--dark-green-middle)';
+      colorTextList.style.borderBottom = '1px solid var(--dark-green-middle)';
+      spaceTextList.style.borderBottom = '1px solid var(--dark-green-middle)';
+      colorPFooter.style.color = 'var(--light-blue)';
+      buttonsImg.style.background = 'var(--dark-blue)';
+      buttonsImg.style.borderBottom = '1px solid var(--dark-green-middle)';
+      listImage.style.background = 'var(--dark-blue)';
+      fondos.style.background = 'var(--dark-blue)';
+      filtros.style.background = 'var(--dark-blue)';
+      imageButton.style.background = 'var(--dark-green)';
+      fondo.style.background = 'var(--dark-green)';
+      filtro.style.background = 'var(--dark-green)';
+      labelUrl.style.color = 'var(--light-blue)';
+      labelBackground.style.color = 'var(--light-blue)';
+      labelBlend.style.color = 'var(--light-blue)';
+      labelBrightness.style.color = 'var(--light-blue)';
+      labelOpacity.style.color = 'var(--light-blue)';
+      labelContrast.style.color = 'var(--light-blue)';
+      labelBlur.style.color = 'var(--light-blue)';
+      labelGrayscale.style.color = 'var(--light-blue)';
+      labelSepia.style.color = 'var(--light-blue)';
+      labelHue.style.color = 'var(--light-blue)';
+      labelSaturate.style.color = 'var(--light-blue)';
+      labelInvert.style.color = 'var(--light-blue)';
+      hexaColor.style.color = 'var(--light-blue)';
+      bottonsText.style.backgroundColor = 'var(--dark-blue)';
+      buttonText.style.backgroundColor = 'var(--dark-green)';
+      buttonColor.style.backgroundColor = 'var(--dark-green)';
+      buttonSpace.style.backgroundColor = 'var(--dark-green)';
+      textList.style.backgroundColor = 'var(--dark-blue)';
+      labelTopText.style.color = 'var(--light-blue)';
+      labelBottomText.style.color = 'var(--light-blue)';
+      fontFamily.style.color = 'var(--light-blue)';
+      textFontSize.style.color = 'var(--light-blue)';
+      labelColor.style.color = 'var(--light-blue)';
+      labelBackgroundText.style.color = 'var(--light-blue)';
+      labelBackTransparentText.style.color = 'var(--light-blue)';
+      labelSpace.style.color = 'var(--light-blue)';
+      lineHeightLabel.style.color = 'var(--light-blue)';
+      labelContorn.style.color = 'var(--light-blue)';
+      labelHexaColorBack.style.color = 'var(--light-blue)';
+      labelHexaColorP.style.color = 'var(--light-blue)';
+      colorTextList.style.backgroundColor = 'var(--dark-blue)';
+      spaceTextList.style.backgroundColor = 'var(--dark-blue)';
+      fondos.style.borderBottom = '1px solid var(--dark-blue)';
+      labelTopTexNone.style.color = 'var(--light-blue)';
+      labelBottomTextNone.style.color = 'var(--light-blue)';
+      containerImg.style.backgroundSize = '100% 100%';
+      modo = 'claro';
     }
 });
 
@@ -507,48 +496,46 @@ textAlignLeft.addEventListener('click', ()=> {
   topText.style.textAlign = `left`;
   bottomText.style.textAlign = `left`;
 });
-textAlignLeft.addEventListener('click', ()=> {
-  bottomText.style.textAlign = `left`;
-});
+// textAlignLeft.addEventListener('click', ()=> {
+//   bottomText.style.textAlign = `left`;
+// });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   bottomText.style.textAlign = 'center';
 });
-textAlignCenter.addEventListener('click', ()=> {
-  topText.style.textAlign = 'center';
-});
+// textAlignCenter.addEventListener('click', ()=> {
+//   topText.style.textAlign = 'center';
+// });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
 });
-textAlignRight.addEventListener('click', ()=> {
-  topText.style.textAlign = 'right';
-});
+// textAlignRight.addEventListener('click', ()=> {
+//   topText.style.textAlign = 'right';
+// });
 
 // Color text and back
-colorP.addEventListener('input', ()=> {
-  hexaColor.textContent = colorP.value;
-  topText.value = "#181b2c";
-  topText.style.color = colorP.value;
-});
+// colorP.addEventListener('input', ()=> {
+//   hexaColor.textContent = colorP.value;
+//   topText.value = "#181b2c";
+//   topText.style.color = colorP.value;
+// });
 
 colorP.addEventListener('input', ()=> {
-  console.log("aca")
-  console.log(hexaColor.textContent)
   labelHexaColorP.textContent = colorP.value;
-  topText.value = "#181b2c";
+  // topText.value = "#181b2c";
   topText.style.color = colorP.value;
-  bottomText.value = "#181b2c";
+  // bottomText.value = "#181b2c";
   bottomText.style.color = colorP.value;
 });
 
 colorBackP.addEventListener('input', ()=> {
   labelHexaColorBack.textContent = colorBackP.value;
-  topText.value = "#181b2c";
+  // topText.value = "#181b2c";
   topText.style.backgroundColor = colorBackP.value;
-  bottomText.value = "#181b2c";
+  // bottomText.value = "#181b2c";
   bottomText.style.backgroundColor = colorBackP.value;
 });
 
@@ -559,13 +546,13 @@ backgroundTransparent.addEventListener('change', ()=> {
 
 function checkeoTransparent(){
   if(backgroundTransparent.checked){
-    topText.style.color = '#020c21';
+    topText.style.color = 'var(--dark-blue)';
     topText.style.backgroundColor = 'transparent';
     topText.style.position = 'relative';
     topText.style.width = '100%';
     topText.style.zIndex = 1;
     topText.style.top = '55px';
-    bottomText.style.color = '#020c21';
+    bottomText.style.color = 'var(--dark-blue)';
     bottomText.style.backgroundColor = 'transparent';
     bottomText.style.position = 'relative';
     bottomText.style.width = '100%';
@@ -640,27 +627,3 @@ document.getElementById('button-download').addEventListener('click', function() 
   });
 
 });
-
-// Para html2canvas
-// a.download = 'captured.png';
-// a.href = canvas.toDataURL('image/png');
-
-//DOWNLOAD BUTTON
-// const downloadMemeBtn = document.getElementById('download-meme-button');
-
-// downloadMemeBtn.addEventListener('click', () =>{
-//     html2canvas(document.getElementById('canvas-meme')).then( canvas=> {
-//         var a = document.createElement('a');
-//         a.download = 'captured.png';
-//         a.href = canvas.toDataURL('image/png');
-//         a.click();
-//     });
-// });
-
-
-
-// Letra andale mono
-// if (menuFuente.value === 'andalemono'){
-//   textoSuperiorH2.style.fontFamily = "'Andale Mono', monospace";
-//   textoInferiorH2.style.fontFamily = "'Andale Mono', monospace";
-// }

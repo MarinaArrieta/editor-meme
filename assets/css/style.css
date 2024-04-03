@@ -5,24 +5,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
 
 :root{
-    --dark-purple: #AE6BF2;
-    --pink: #fd50f3;
-    --yellow: #FFEB3B;
-    
-    /* Modo Oscuro */
-    --gray: #2a2a4d;
-    --gray-light: #383852;
-    --blue: #181b2c;
-
-    /* Modo Claro */
-    --purple: #D8B4F8;
-    --light-yellow: #fff6a9;
-    --green: #88ddff;
+    --light-blue: #58c5f9;
+    --light-green: #9afb29;
+    --purple: #3f51b5;
+    --white: #ffffff;
     --boder-radius: 3px;
-    --light-blue: #39a4b1;
-    --light-gradient: linear-gradient(rgb(173, 136, 198) 1px, transparent 1px), linear-gradient(to right, rgb(173, 136, 198) 1px, #ebd7b9 1px);
+    
+    /* Dark mode */
+    --gradient-dark: radial-gradient(22% 16% at -11% 18%, rgb(0, 11, 75) 42%, rgba(0, 40, 57, 0.82) 75%, rgba(76, 175, 80, 0) 121%) fixed, radial-gradient(18% 28% at 18% 71%, rgb(10, 20, 69) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(0, 0, 0) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, rgb(2, 7, 35) 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(18, 43, 187) 7%, rgba(1, 41, 37, 0.4) 100%), radial-gradient(18% 28% at 35% 87%, rgb(23, 124, 209) 7%, rgba(0, 48, 71, 0.39) 100%), radial-gradient(31% 43% at 7% 98%, rgb(7, 19, 85) 24%, rgba(2, 43, 49, 0.35) 100%), radial-gradient(21% 37% at 72% 23%, rgba(211, 255, 109, 0.89) 24%, rgba(96, 125, 139, 0.13) 100%), radial-gradient(35% 56% at 91% 74%, rgba(24, 4, 63, 0.96) 9%, rgba(7, 58, 255, 0) 100%), radial-gradient(74% 86% at 67% 38%, rgb(3, 88, 99) 24%, rgb(96, 125, 139) 100%), linear-gradient(125deg, rgb(13, 151, 18) 1%, rgb(76, 175, 80) 100%);
+    --dark-blue: #020c21;
+    --dark-green: #212c33;
+    --dark-green-middle: #1d3b49;
 
+    /* Light mode */
+    --middle-purple: #6c5ce7;
+    --light-purple: #a29bfe;
+    --light-gradient: radial-gradient(17% 23% at 75% 40%, #f3c47e 40%, rgb(188 243 123) 62%, rgba(76, 175, 80, 0) 129%), radial-gradient(17% 23% at 108% 51%, #ffe81bb8 40%, rgb(253 175 201 / 63%) 71%, rgba(76, 175, 80, 0) 121%), radial-gradient(22% 19% at -12% 27%, #E91E63 40%, rgb(209 249 162 / 108%) 73%, rgba(76, 175, 80, 0) 121%), radial-gradient(18% 28% at 18% 71%, rgb(243 129 168) 6%, rgba(62, 96, 113, 0.11) 100%), radial-gradient(70% 53% at 36% 76%, rgb(251 234 184) 0px, rgba(1, 52, 75, 0.03) 100%), radial-gradient(42% 53% at 15% 94%, #FF9800 7%, rgba(0, 150, 136, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgb(248 206 255) 7%, rgb(0 188 212 / 0%) 100%), radial-gradient(18% 28% at 35% 87%, #ffea33 7%, rgb(20 163 231 / 56%) 100%), radial-gradient(31% 43% at 7% 98%, #FFEB3B 24%, rgb(240 163 253) 100%), radial-gradient(21% 37% at 72% 23%, rgb(211 255 109) 24%, rgb(30 174 243 / 97%) 100%), radial-gradient(35% 56% at 91% 74%, #CDDC39 9%, rgb(7 58 255) 100%), linear-gradient(125deg, rgb(21 237 28) 1%, rgb(125 21 143) 100%), radial-gradient(74% 86% at 67% 38%, rgb(118 240 255) 24%, rgb(72 174 223) 100%);
 
+    /* Fonts */
     --primary-font: "Madimi One", sans-serif;
     --secundary-font: "Average Sans", sans-serif;
 }
