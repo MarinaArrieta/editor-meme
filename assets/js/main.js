@@ -41,7 +41,7 @@ let labelHexaColorP = document.getElementById('label-hexa-color-p');
 let labelTopTexNone = document.getElementById('label-top-text-none');
 let labelBottomTextNone = document.getElementById('label-bottom-text-none');
 let icon = document.getElementById('icon');
-let modo = 'oscuro';
+let mode = 'dark';
 let sectionImagen = document.getElementById('section-imagen');
 let sectionTexto = document.getElementById('section-texto');
 let colorPFooter = document.getElementById('color-p-footer');
@@ -157,7 +157,7 @@ buttonSpace.addEventListener('click', ()=> {
 
 // Mood light and dark
 botonMood.addEventListener('click', () => {
-    if (modo === 'claro'){
+    if (mode === 'dark'){
         document.querySelector("body").style.background = "var(--light-gradient)";
         document.querySelector("body").style.backgroundAttachment = 'fixed';
         backHeader.style.backgroundColor = 'var(--pink)';
@@ -222,7 +222,7 @@ botonMood.addEventListener('click', () => {
         labelTopTexNone.style.color = 'var(--light-green)';
         labelBottomTextNone.style.color = 'var(--light-green)';
         containerImg.style.backgroundSize = '100% 100%';
-        modo = 'oscuro';
+        mode = 'light';
     } else {
       document.querySelector("body").style.background = 'var(--gradient-dark)';
       document.querySelector("body").style.backgroundAttachment = 'fixed';
@@ -289,7 +289,7 @@ botonMood.addEventListener('click', () => {
       labelTopTexNone.style.color = 'var(--light-blue)';
       labelBottomTextNone.style.color = 'var(--light-blue)';
       containerImg.style.backgroundSize = '100% 100%';
-      modo = 'claro';
+      mode = 'dark';
     }
 });
 
@@ -557,7 +557,7 @@ function checkeoTransparent(){
     bottomText.style.position = 'relative';
     bottomText.style.width = '100%';
     bottomText.style.zIndex = 1;
-    bottomText.style.bottom = '119px';
+    bottomText.style.bottom = '117px';
     containerImg.style.position = 'relative';
     containerImg.style.zIndex = 0;
     containerImg.style.height = '50vh';
@@ -613,16 +613,16 @@ lineHeightP.addEventListener('change', ()=> {
 document.getElementById('button-download').addEventListener('click', function() {
 
   container_meme = document.querySelector('.container-img-p');
-  config = {
-    quality: 1 // baja la calidad de imagen (1 es sin bajar la calidad)
-    // imagePlaceholder: img if the other fail
-  }
+config = {
+quality: 1 // baja la calidad de imagen (1 es sin bajar la calidad)
+// imagePlaceholder: img if the other fail
+}
   // https://github.com/tsayen/dom-to-image
-  domtoimage.toJpeg(container_meme, config).then(function (dataUrl) {
-    let link = document.createElement('a');
-    link.download = 'memeker.jpeg';
-    link.href = dataUrl;
-    link.click();
-  });
+domtoimage.toJpeg(container_meme, config).then(function (dataUrl) {
+let link = document.createElement('a');
+link.download = 'memeker.jpeg';
+link.href = dataUrl;
+link.click();
+});
 
 });
