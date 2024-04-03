@@ -2,6 +2,10 @@ h1 {
     font-size: 4rem;
 }
 
+.container-meme {
+    width: 50%;
+}
+
 p{
     font-size: 2rem;
 }
