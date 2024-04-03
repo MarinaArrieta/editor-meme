@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memeker</title>
     <meta name="description" content="Creá memes y descargalos al instante!" />
     <!-- Open Graph / Facebook -->
@@ -17,17 +18,18 @@
     <meta property="twitter:title" content="Memeker" />
     <meta property="twitter:description" content="Creá memes y descargalos al instante!" />
     <meta property="twitter:image" content="https://i.postimg.cc/Y0W9WV8r/img-og.png" />
-    <link rel="icon" href="./assets/image/icon.png">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/image/icon.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://kit.fontawesome.com/cd30d5437a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="back-header">
         <h1>Memeker</h1>
         <nav>
             <ul>
                 <li>
-                    <button  id="boton-img" aria-label="Sección imagen">
+                    <button id="boton-img" aria-label="Sección imagen">
                         <i class="fa-solid fa-file-image"></i>
                     </button>
                 </li>
@@ -46,185 +48,188 @@
     </header>
     <main id="back-main">
         <aside>
-            <!-- <section> -->
-                <div id="buttons-img" class="img oculto">
-                    <button id="image-button" aria-label="Cargar imagen">IMAGEN</button>
-                    <button id="fondo" aria-label="Fondo de imágen">FONDO</button>
-                    <button id="filtro" aria-label="Filtros de imágen">FILTROS</button>
-                </div>
-                <ul id="list-image" class="botones oculto">
-                    <li>
-                        <label id="label-url">URL</label>
-                        <input type="url" placeholder="Ingrese url..." id="input-image-url">
-                        <input type="file" id="input-image" accept="image/png, .jpeg, .jpg">
-                    </li>
-                </ul>
-                <ul id="fondos" class="botones oculto">
-                    <li>
-                        <label id="label-background" aria-label="Color del fondo">FONDO</label>
-                        <input type="color" id="color" value="#FFFFFF">
-                        <label id="hexa-color" aria-label="Color en hexadecimal">#FFFFFF</label>
-                    </li>
-                    <li>
-                        <label id="label-blend" aria-label="Filtros blend mode">BLEND MODE</label>
-                        <select id="blendModeFilter">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="aclarar">Aclarar</option>
-                            <option value="oscurecer">Oscurecer</option>
-                            <option value="diferencia">Diferencia</option>
-                            <option value="luminucidad">Luminucidad</option>
-                            <option value="multiplicar">Multiplicar</option>
-                        </select>
-                    </li>
-                </ul>
-                    <ul id="filtros" class="botones oculto">
-                        <li>
-                            <label id="label-brightness" aria-label="Filtro brillo">BRILLO</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-brightness">
-                        </li>
-                        <li>
-                            <label id="label-opacity" aria-label="Filtro opacidad">OPACIDAD</label>
-                            <input type="range" min="0" max="100" value="100" id="filter-opacity">
-                        </li>
-                        <li>
-                            <label id="label-contrast" aria-label="Filtro contraste">CONTRASTE</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-contrast">
-                        </li>
-                        <li>
-                            <label id="label-blur" aria-label="Filtro desenfoque">DESENFOQUE</label>
-                            <input type="range" min="0" max="100" value="0" id="filter-blur">
-                        </li>
-                        <li>
-                            <label id="label-grayscale" aria-label="Filtro escala de frises">ESCALA DE GRISES</label>
-                            <input type="range" min="0" max="50" value="0" id="grayscale">
-                        </li>
-                        <li>
-                            <label id="label-sepia" aria-label="Filtro sepia">SEPIA</label>
-                            <input id="filter-sepia" type="range" min="0" max="100" value="0">
-                        </li>
-                        <li>
-                            <label id="label-hue" aria-label="Filtro matiz">MATIZ</label>
-                            <input type="range" min="0" max="360" value="0" id="filter-hue">
-                        </li>
-                        <li>
-                            <label id="label-saturate" aria-label="Filtro saturación">SATURADO</label>
-                            <input type="range" min="0" max="200" value="100" id="filter-saturate">
-                        </li>
-                        <li>
-                            <label id="label-invert" aria-label="Filtro negativo">NEGATIVO</label>
-                            <input type="range"  min="0" max="100" value="0" id="filter-negative">
-                        </li>
-                        <li class="button-reset">
-                            <button type="button" id="button-reset-filter">
-                                <i class="fa-solid fa-arrow-rotate-right"></i>
-                            </button>
-                        </li>
-                    </ul>
-            <!-- </section> -->
-            </aside>
-            <!-- <section id="section-texto" > -->
-            <aside></aside>
-                <div id="bottons-text" class="img oculto">
-                    <button id="button-text">TEXTO</button>
-                    <button id="button-color">COLOR</button>
-                    <button id="button-space">ESPACIADO</button>
-                </div>
-                <ul id="text-list" class="botones oculto">
-                    <li>
-                        <label id="label-top-text" aria-label="Texto superior">SUPERIOR</label>
-                        <input type="text" id="input-top-text">
-                    </li>
-                    <li class="transparent-back">
-                        <label id="label-top-text-none" aria-label="Texto superior">Sin texto superior</label>
-                        <input type="checkbox" id="not-top-text"> 
-                    </li>
-                    <li>
-                        <label id="label-bottom-text" aria-label="Texto inferior">INFERIOR</label>
-                        <input type="text" id="input-bottom-text">
-                    </li>
-                    <li class="transparent-back">
-                        <label  id="label-bottom-text-none" aria-label="Texto inferior">Sin texto inferior</label>
-                        <input type="checkbox" id="not-bottom-text"> 
-                    </li>
-                    <li>
-                        <label id="font-family" aria-label="Estilos de fuente">FUENTE</label>
-                        <select id="font-family-p">
-                            <option value="impact">Impact</option>
-                            <option value="arial">Arial</option>
-                            <option value="arialBlack">Arial Black</option>
-                            <option value="americanTypewriter">American Typewriter</option>
-                            <option value="madimiOne">Madimi One</option>
-                            <option value="comicSans">Comic Sans MS</option>
-                            <option value="helvetica">Helvetica</option>
-                            <option value="verdana">Verdana</option>
-                            <option value="timesNewRoman">Times New Roman</option>
-                        </select>
-                    <li>
-                        <label id="text-font-size" aria-label="Tamaño de texto">TAMAÑO</label>
-                        <input type="number" min="30" max="60" value="30" id="font-size">
-                    </li>
-                    <li>
-                        <div class="botons-directions-txt">
-                            <button type="button" class="button-direction" aria-label="Izquierda">
-                                <i class="fa-solid fa-align-left" id="text-align-left"></i>
-                            </button>
-                            <button type="button" class="button-direction" aria-label="Centro">
-                                <i class="fa-solid fa-align-center" id="text-align-center"></i>
-                            </button>
-                            <button type="button" class="button-direction" aria-label="Derecha">
-                                <i class="fa-solid fa-align-right" id="text-align-right"></i>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-                <ul id="color-text-list" class="botones oculto">
-                    <li>
-                        <label id="label-color">COLOR TEXTO</label>
-                        <input type="color" id="color-p" value="#58c5f9" aria-label="Color">
-                        <label id="label-hexa-color-p" aria-label="Color hexadecimal">#58c5f9</label>
-                    </li>
-                    <li>
-                        <label id="label-background-text">FONDO TEXTO</label>
-                        <input type="color" id="color-back-p" value="#58c5f9" aria-label="Color">
-                        <label id="label-hexa-color-back" aria-label="Color hexadecimal">#58c5f9</label>
-                    </li>
-                    <li class="transparent-back">
-                        <label id="label-back-transparent-text">Fondo transparente</label>
-                        <input type="checkbox" id="background-transparent" aria-label="Selección fondo transparente"> 
-                    </li>
-                </ul>
-                <ul id="space-text-list" class="botones oculto">
-                    <li class="contorno">
-                        <label id="label-contorn">CONTORNO</label>
-                        <div class="botons-directions-txt">
-                            <button type="button" id="contorno-p-none" aria-label="Sin contorno">Ninguno</button>
-                            <button type="button" id="contorno-p-light" aria-label="Contorno claro">Claro</button>
-                            <button type="button" id="contorno-p-dark" aria-label="Contorno oscuro">Oscuro</button>
-                        </div>
-                    </li>
-                    <li>
-                        <label id="label-space">ESPACIADO</label>
-                        <input type="number" min="10" max="30" value="10" id="padding-p" aria-label="Espacio del texto">
-                    </li>
-                    <li>
-                        <label id="line-height-label">INTERLINEADO</label>
-                        <select id="line-height-p">
-                            <option value="0.8">0.8</option>
-                            <option value="1">1</option>
-                            <option value="1.2">1.2</option>
-                            <option value="1.5">1.5</option>
-                            <option value="2">2</option>
-                            <option value="2.5">2.5</option>
-                        </select>
-                    </li>
-                </ul>
-            <!-- </section> -->
+            <div id="buttons-img" class="img oculto">
+                <button id="image-button" aria-label="Cargar imagen">IMAGEN</button>
+                <button id="fondo" aria-label="Fondo de imágen">FONDO</button>
+                <button id="filtro" aria-label="Filtros de imágen">FILTROS</button>
+            </div>
+            <ul id="list-image" class="botones oculto">
+                <li>
+                    <label id="label-url">URL</label>
+                    <input type="url" placeholder="Ingrese url..." id="input-image-url" />
+                    <input type="file" id="input-image" accept="image/png, .jpeg, .jpg" />
+                </li>
+            </ul>
+            <ul id="fondos" class="botones oculto">
+                <li>
+                    <label id="label-background" aria-label="Color del fondo">FONDO</label>
+                    <input type="color" id="color" value="#FFFFFF" />
+                    <label id="hexa-color" aria-label="Color en hexadecimal">#FFFFFF</label>
+                </li>
+                <li>
+                    <label id="label-blend" aria-label="Filtros blend mode">BLEND MODE</label>
+                    <select id="blendModeFilter">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminucidad">Luminucidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+                    </select>
+                </li>
+            </ul>
+            <ul id="filtros" class="botones oculto">
+                <li>
+                    <label id="label-brightness" aria-label="Filtro brillo">BRILLO</label>
+                    <input type="range" min="0" max="200" value="100" id="filter-brightness" />
+                </li>
+                <li>
+                    <label id="label-opacity" aria-label="Filtro opacidad">OPACIDAD</label>
+                    <input type="range" min="0" max="100" value="100" id="filter-opacity" />
+                </li>
+                <li>
+                    <label id="label-contrast" aria-label="Filtro contraste">CONTRASTE</label>
+                    <input type="range" min="0" max="200" value="100" id="filter-contrast" />
+                </li>
+                <li>
+                    <label id="label-blur" aria-label="Filtro desenfoque">DESENFOQUE</label>
+                    <input type="range" min="0" max="100" value="0" id="filter-blur" />
+                </li>
+                <li>
+                    <label id="label-grayscale" aria-label="Filtro escala de frises">ESCALA DE GRISES</label>
+                    <input type="range" min="0" max="50" value="0" id="grayscale" />
+                </li>
+                <li>
+                    <label id="label-sepia" aria-label="Filtro sepia">SEPIA</label>
+                    <input id="filter-sepia" type="range" min="0" max="100" value="0" />
+                </li>
+                <li>
+                    <label id="label-hue" aria-label="Filtro matiz">MATIZ</label>
+                    <input type="range" min="0" max="360" value="0" id="filter-hue" />
+                </li>
+                <li>
+                    <label id="label-saturate" aria-label="Filtro saturación">SATURADO</label>
+                    <input type="range" min="0" max="200" value="100" id="filter-saturate" />
+                </li>
+                <li>
+                    <label id="label-invert" aria-label="Filtro negativo">NEGATIVO</label>
+                    <input type="range" min="0" max="100" value="0" id="filter-negative" />
+                </li>
+                <li class="button-reset">
+                    <button type="button" id="button-reset-filter">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+        <aside>
+            <div id="bottons-text" class="img oculto">
+                <button id="button-text">TEXTO</button>
+                <button id="button-color">COLOR</button>
+                <button id="button-space">ESPACIADO</button>
+            </div>
+            <ul id="text-list" class="botones oculto">
+                <li>
+                    <label id="label-top-text" aria-label="Texto superior">SUPERIOR</label>
+                    <input type="text" id="input-top-text" />
+                </li>
+                <li class="transparent-back">
+                    <label id="label-top-text-none" aria-label="Texto superior">Sin texto superior</label>
+                    <input type="checkbox" id="not-top-text" />
+                </li>
+                <li>
+                    <label id="label-bottom-text" aria-label="Texto inferior">INFERIOR</label>
+                    <input type="text" id="input-bottom-text" />
+                </li>
+                <li class="transparent-back">
+                    <label id="label-bottom-text-none" aria-label="Texto inferior">Sin texto inferior</label>
+                    <input type="checkbox" id="not-bottom-text" />
+                </li>
+                <li>
+                    <label id="font-family" aria-label="Estilos de fuente">FUENTE</label>
+                    <select id="font-family-p">
+                        <option value="impact">Impact</option>
+                        <option value="arial">Arial</option>
+                        <option value="arialBlack">Arial Black</option>
+                        <option value="americanTypewriter">American Typewriter</option>
+                        <option value="madimiOne">Madimi One</option>
+                        <option value="comicSans">Comic Sans MS</option>
+                        <option value="helvetica">Helvetica</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="timesNewRoman">Times New Roman</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label id="text-font-size" aria-label="Tamaño de texto">TAMAÑO</label>
+                    <input type="number" min="30" max="60" value="30" id="font-size" />
+                </li>
+                <li>
+                    <div class="botons-directions-txt">
+                        <button type="button" class="button-direction" aria-label="Izquierda">
+                            <i class="fa-solid fa-align-left" id="text-align-left"></i>
+                        </button>
+                        <button type="button" class="button-direction" aria-label="Centro">
+                            <i class="fa-solid fa-align-center" id="text-align-center"></i>
+                        </button>
+                        <button type="button" class="button-direction" aria-label="Derecha">
+                            <i class="fa-solid fa-align-right" id="text-align-right"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <ul id="color-text-list" class="botones oculto">
+                <li>
+                    <label id="label-color">COLOR TEXTO</label>
+                    <input type="color" id="color-p" value="#58c5f9" aria-label="Color" />
+                    <label id="label-hexa-color-p" aria-label="Color hexadecimal">#58c5f9</label>
+                </li>
+                <li>
+                    <label id="label-background-text">FONDO TEXTO</label>
+                    <input type="color" id="color-back-p" value="#58c5f9" aria-label="Color" />
+                    <label id="label-hexa-color-back" aria-label="Color hexadecimal">#58c5f9</label>
+                </li>
+                <li class="transparent-back">
+                    <label id="label-back-transparent-text">Fondo transparente</label>
+                    <input type="checkbox" id="background-transparent" aria-label="Selección fondo transparente" />
+                </li>
+            </ul>
+            <ul id="space-text-list" class="botones oculto">
+                <li class="contorno">
+                    <label id="label-contorn">CONTORNO</label>
+                    <div class="botons-directions-txt">
+                        <button type="button" id="contorno-p-none" aria-label="Sin contorno">
+                            Ninguno
+                        </button>
+                        <button type="button" id="contorno-p-light" aria-label="Contorno claro">
+                            Claro
+                        </button>
+                        <button type="button" id="contorno-p-dark" aria-label="Contorno oscuro">
+                            Oscuro
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <label id="label-space">ESPACIADO</label>
+                    <input type="number" min="10" max="30" value="10" id="padding-p" aria-label="Espacio del texto" />
+                </li>
+                <li>
+                    <label id="line-height-label">INTERLINEADO</label>
+                    <select id="line-height-p">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </li>
+            </ul>
         </aside>
         <div class="container-meme">
             <div class="container-img-p">
                 <p id="top-text" class="top-text">TEXTO SUPERIOR</p>
-                <div id="container-img" class="container-img">
-                </div>
+                <div id="container-img" class="container-img"></div>
                 <p id="bottom-text" class="bottom-text">TEXTO INFERIOR</p>
             </div>
             <div class="button">
@@ -240,4 +245,5 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/dom-to-image.js"></script>
 </body>
+
 </html>
