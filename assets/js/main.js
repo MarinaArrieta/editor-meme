@@ -496,46 +496,26 @@ textAlignLeft.addEventListener('click', ()=> {
   topText.style.textAlign = `left`;
   bottomText.style.textAlign = `left`;
 });
-// textAlignLeft.addEventListener('click', ()=> {
-//   bottomText.style.textAlign = `left`;
-// });
 
 textAlignCenter.addEventListener('click', ()=> {
   topText.style.textAlign = 'center';
   bottomText.style.textAlign = 'center';
 });
-// textAlignCenter.addEventListener('click', ()=> {
-//   topText.style.textAlign = 'center';
-// });
 
 textAlignRight.addEventListener('click', ()=> {
   topText.style.textAlign = 'right';
   bottomText.style.textAlign = 'right';
 });
-// textAlignRight.addEventListener('click', ()=> {
-//   topText.style.textAlign = 'right';
-// });
-
-// Color text and back
-// colorP.addEventListener('input', ()=> {
-//   hexaColor.textContent = colorP.value;
-//   topText.value = "#181b2c";
-//   topText.style.color = colorP.value;
-// });
 
 colorP.addEventListener('input', ()=> {
   labelHexaColorP.textContent = colorP.value;
-  // topText.value = "#181b2c";
   topText.style.color = colorP.value;
-  // bottomText.value = "#181b2c";
   bottomText.style.color = colorP.value;
 });
 
 colorBackP.addEventListener('input', ()=> {
   labelHexaColorBack.textContent = colorBackP.value;
-  // topText.value = "#181b2c";
   topText.style.backgroundColor = colorBackP.value;
-  // bottomText.value = "#181b2c";
   bottomText.style.backgroundColor = colorBackP.value;
 });
 
