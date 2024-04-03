@@ -143,7 +143,6 @@ p{
 
 aside{
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .img{
@@ -192,6 +191,7 @@ aside{
 }
 
 #list-image, #text-list, #space-text-list{
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 10px 0px;
